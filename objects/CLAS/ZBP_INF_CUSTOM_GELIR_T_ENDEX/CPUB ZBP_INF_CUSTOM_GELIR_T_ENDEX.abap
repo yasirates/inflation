@@ -1,0 +1,1 @@
+CLASS zbp_inf_custom_gelir_t_endex DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zinf_custom_gelir_t_endex.

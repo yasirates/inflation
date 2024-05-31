@@ -1,0 +1,1 @@
+CLASS zbp_inf_i_hknt_valuation DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zinf_i_hknt_valuation.

@@ -1,0 +1,1 @@
+CLASS zbp_inf_custom_stock_trans_spe DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zinf_custom_stock_trans_speed.

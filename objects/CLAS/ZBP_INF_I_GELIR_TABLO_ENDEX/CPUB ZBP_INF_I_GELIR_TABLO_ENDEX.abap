@@ -1,0 +1,1 @@
+CLASS zbp_inf_i_gelir_tablo_endex DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zinf_i_gelir_tablo_endex.

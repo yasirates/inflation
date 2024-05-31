@@ -1,0 +1,1 @@
+CLASS zbp_inf_custom_stk_correction DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zinf_custom_stk_correction.

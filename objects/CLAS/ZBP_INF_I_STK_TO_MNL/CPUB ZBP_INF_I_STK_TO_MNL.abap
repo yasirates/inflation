@@ -1,0 +1,1 @@
+CLASS zbp_inf_i_stk_to_mnl DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zinf_i_stk_to_mnl.
