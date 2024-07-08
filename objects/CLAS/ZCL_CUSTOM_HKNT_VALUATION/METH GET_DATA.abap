@@ -13,7 +13,7 @@
         FROM zinf_t003
         WHERE bukrs EQ @iv_bukrs
           AND rldnr EQ @iv_rldnr
-          AND statu EQ 'A'
+          AND statu EQ '' "- Sadece boş olanlar anahesap değerleme programında kullanılır , A ve P olanlar ise Ters çalışan hesaplar programına dahil edilir.
           AND hkont IN @it_hkont
          INTO TABLE @mt_deger.
     ELSE.
@@ -21,7 +21,7 @@
         FROM zinf_t003
        WHERE bukrs EQ @iv_bukrs
          AND rldnr EQ @iv_rldnr
-         AND statu EQ 'A'
+         AND statu EQ '' "- Sadece boş olanlar anahesap değerleme programında kullanılır , A ve P olanlar ise Ters çalışan hesaplar programına dahil edilir.
         INTO TABLE @mt_deger.
     ENDIF.
 *

@@ -3,8 +3,8 @@ CLASS lhc_valuation DEFINITION INHERITING FROM cl_abap_behavior_handler.
     METHODS get_instance_authorizations FOR INSTANCE AUTHORIZATION
       IMPORTING keys REQUEST requested_authorizations FOR valuation RESULT result.
 
-*    METHODS read FOR READ
-*      IMPORTING keys FOR READ valuation RESULT result.
+    METHODS read FOR READ
+      IMPORTING keys FOR READ valuation RESULT result.
 
     METHODS lock FOR LOCK
       IMPORTING keys FOR LOCK valuation.
@@ -27,14 +27,14 @@ CLASS lhc_valuation DEFINITION INHERITING FROM cl_abap_behavior_handler.
 *    METHODS create FOR MODIFY
 *      IMPORTING entities FOR CREATE valuation.
 
-    METHODS read FOR READ
-      IMPORTING keys FOR READ valuation RESULT result.
+*    METHODS read FOR READ
+*      IMPORTING keys FOR READ valuation RESULT result.
 
-    METHODS prepare_data IMPORTING VALUE(it_data)  TYPE zinf_tt_008
-                                   VALUE(iv_budat) TYPE budat
-                         RETURNING VALUE(rs_data)  TYPE zjejournal_entry_bulk_ledger_c.
+*    METHODS prepare_data IMPORTING VALUE(it_data)  TYPE zinf_tt_008
+*                                   VALUE(iv_budat) TYPE budat
+*                         RETURNING VALUE(rs_data)  TYPE zjejournal_entry_bulk_ledger_c.
 
-    METHODS journal_entry_create IMPORTING VALUE(is_request) TYPE zjejournal_entry_bulk_ledger_c.
+*    METHODS journal_entry_create IMPORTING VALUE(is_request) TYPE zjejournal_entry_bulk_ledger_c.
 ENDCLASS.
 
 CLASS lhc_valuation IMPLEMENTATION.
@@ -42,7 +42,7 @@ CLASS lhc_valuation IMPLEMENTATION.
   METHOD get_instance_authorizations.
   ENDMETHOD.
 
-*  METHOD read.
+  METHOD read.
 *    DATA t008 LIKE result.
 *
 *    CHECK keys IS NOT INITIAL.
@@ -56,7 +56,7 @@ CLASS lhc_valuation IMPLEMENTATION.
 *    LOOP AT t008 INTO DATA(ls_008).
 *      INSERT ls_008 INTO TABLE result.
 *    ENDLOOP.
-*  ENDMETHOD.
+  ENDMETHOD.
 *
   METHOD lock.
   ENDMETHOD.
@@ -212,73 +212,73 @@ CLASS lhc_valuation IMPLEMENTATION.
 *  METHOD reverse.
 *  ENDMETHOD.
 
-  METHOD prepare_data.
-    DATA: lt_header       TYPE zjejournal_entry_create_re_tab,
-          ls_header       TYPE zjejournal_entry_create_reques,
-          lt_item         TYPE zjejournal_entry_create_r_tab1,
-          ls_item         TYPE zjejournal_entry_create_reque3,
-          lv_currencyCode TYPE I_CompanyCode-Currency.
+*  METHOD prepare_data.
+*    DATA: lt_header       TYPE zjejournal_entry_create_re_tab,
+*          ls_header       TYPE zjejournal_entry_create_reques,
+*          lt_item         TYPE zjejournal_entry_create_r_tab1,
+*          ls_item         TYPE zjejournal_entry_create_reque3,
+*          lv_currencyCode TYPE I_CompanyCode-Currency.
+*
+*    LOOP AT it_data INTO DATA(ls_data).
+*      IF lv_currencyCode IS INITIAL.
+*        SELECT SINGLE Currency
+*          FROM I_CompanyCode
+*         WHERE CompanyCode EQ @ls_data-bukrs
+*          INTO @lv_currencyCode.
+*      ENDIF.
+*      ls_header-journal_entry = VALUE #( company_code              = ls_data-bukrs
+*                                         document_date             = ls_data-budat
+*                                         accounting_document       = ls_data-belnr
+*                                         business_transaction_type = 'RFBU'
+*                                         posting_date              = ls_data-budat
+*                                         posting_fiscal_period     = iv_budat+4(2)
+*                                       ).
+*
+*
+*      ls_item-glaccount-content                            = ls_data-correct_hkont_bs.
+*      ls_item-amount_in_transaction_currency-content       = ls_data-correct_balance.
+*      ls_item-amount_in_transaction_currency-currency_code = lv_currencyCode.
+*      ls_item-amount_in_company_code_currenc-content       = ls_data-correct_balance.
+*      ls_item-amount_in_company_code_currenc-currency_code = lv_currencyCode.
+*      ls_item-document_item_text                           = 'ENFLASYON-DÜZELTME'.
+*      "ls_item-account_assignment
+*      ls_item-debit_credit_code  = COND #( WHEN ls_data-correct_balance LT 0 THEN 'H'
+*                                           WHEN ls_data-correct_balance GE 0 THEN 'S').
+*
+*
+*      APPEND ls_item TO ls_header-journal_entry-item. CLEAR ls_item.
+*
+*      ls_item-glaccount-content                            = ls_data-correct_hkont_pl.
+*      ls_item-amount_in_transaction_currency-content       = ls_data-correct_balance.
+*      ls_item-amount_in_transaction_currency-currency_code = lv_currencyCode.
+*      ls_item-amount_in_company_code_currenc-content       = ls_data-correct_balance.
+*      ls_item-amount_in_company_code_currenc-currency_code = lv_currencyCode.
+*      ls_item-document_item_text                           = 'ENFLASYON-DÜZELTME'.
+*      "ls_item-account_assignment
+*      ls_item-debit_credit_code  = COND #( WHEN ls_data-correct_balance LT 0 THEN 'H'
+*                                           WHEN ls_data-correct_balance GE 0 THEN 'S').
+*
+*      APPEND ls_item TO ls_header-journal_entry-item. CLEAR ls_item.
+*      APPEND ls_header TO lt_header. CLEAR ls_header.
+*
+*    ENDLOOP.
+*
+*    rs_data-journal_entry_bulk_ledger_crea-journal_entry_create_request = lt_header.
+*  ENDMETHOD.
 
-    LOOP AT it_data INTO DATA(ls_data).
-      IF lv_currencyCode IS INITIAL.
-        SELECT SINGLE Currency
-          FROM I_CompanyCode
-         WHERE CompanyCode EQ @ls_data-bukrs
-          INTO @lv_currencyCode.
-      ENDIF.
-      ls_header-journal_entry = VALUE #( company_code              = ls_data-bukrs
-                                         document_date             = ls_data-budat
-                                         accounting_document       = ls_data-belnr
-                                         business_transaction_type = 'RFBU'
-                                         posting_date              = ls_data-budat
-                                         posting_fiscal_period     = iv_budat+4(2)
-                                       ).
-
-
-      ls_item-glaccount-content                            = ls_data-correct_hkont_bs.
-      ls_item-amount_in_transaction_currency-content       = ls_data-correct_balance.
-      ls_item-amount_in_transaction_currency-currency_code = lv_currencyCode.
-      ls_item-amount_in_company_code_currenc-content       = ls_data-correct_balance.
-      ls_item-amount_in_company_code_currenc-currency_code = lv_currencyCode.
-      ls_item-document_item_text                           = 'ENFLASYON-DÜZELTME'.
-      "ls_item-account_assignment
-      ls_item-debit_credit_code  = COND #( WHEN ls_data-correct_balance LT 0 THEN 'H'
-                                           WHEN ls_data-correct_balance GE 0 THEN 'S').
-
-
-      APPEND ls_item TO ls_header-journal_entry-item. CLEAR ls_item.
-
-      ls_item-glaccount-content                            = ls_data-correct_hkont_pl.
-      ls_item-amount_in_transaction_currency-content       = ls_data-correct_balance.
-      ls_item-amount_in_transaction_currency-currency_code = lv_currencyCode.
-      ls_item-amount_in_company_code_currenc-content       = ls_data-correct_balance.
-      ls_item-amount_in_company_code_currenc-currency_code = lv_currencyCode.
-      ls_item-document_item_text                           = 'ENFLASYON-DÜZELTME'.
-      "ls_item-account_assignment
-      ls_item-debit_credit_code  = COND #( WHEN ls_data-correct_balance LT 0 THEN 'H'
-                                           WHEN ls_data-correct_balance GE 0 THEN 'S').
-
-      APPEND ls_item TO ls_header-journal_entry-item. CLEAR ls_item.
-      APPEND ls_header TO lt_header. CLEAR ls_header.
-
-    ENDLOOP.
-
-    rs_data-journal_entry_bulk_ledger_crea-journal_entry_create_request = lt_header.
-  ENDMETHOD.
-
-  METHOD journal_entry_create.
-    DATA lo_journal_entry TYPE REF TO zjeco_journal_entry_bulk_ledge.
-
-    TRY.
-
-        lo_journal_entry = NEW #( ).
-        lo_journal_entry->journal_entry_bulk_ledger_crea( input = is_request ).
-
-      CATCH  cx_ai_system_fault INTO DATA(cx_system_fault).
-
-    ENDTRY.
-
-  ENDMETHOD.
+*  METHOD journal_entry_create.
+*    DATA lo_journal_entry TYPE REF TO zjeco_journal_entry_bulk_ledge.
+*
+*    TRY.
+*
+*        lo_journal_entry = NEW #( ).
+*        lo_journal_entry->journal_entry_bulk_ledger_crea( input = is_request ).
+*
+*      CATCH  cx_ai_system_fault INTO DATA(cx_system_fault).
+*
+*    ENDTRY.
+*
+*  ENDMETHOD.
 
 *  METHOD update.
 *    DATA lt_008 TYPE TABLE OF zinf_t008.
@@ -329,8 +329,8 @@ CLASS lhc_valuation IMPLEMENTATION.
 *  METHOD create.
 *  ENDMETHOD.
 
-  METHOD read.
-  ENDMETHOD.
+*  METHOD read.
+*  ENDMETHOD.
 
 ENDCLASS.
 

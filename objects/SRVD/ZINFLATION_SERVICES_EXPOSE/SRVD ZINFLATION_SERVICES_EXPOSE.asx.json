@@ -7,9 +7,9 @@
     "SRVDNAME":"ZINFLATION_SERVICES_EXPOSE",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2024-04-06",
-    "CHANGED_AT":"21:14:35",
-    "DT_UUID":"03C4E1D494DB1EDEBD8B555C54F19FDB",
+    "CHANGED_ON":"2024-07-02",
+    "CHANGED_AT":"10:49:18",
+    "DT_UUID":"5B80129E71491EEF8E8C17567E2400CF",
     "SOURCE_ORIGIN":"0",
     "SRVD_SOURCE_TYPE":"S",
     "ABAP_LANGUAGE_VERSION":"5"
@@ -35,7 +35,7 @@
    {
     "SRVDNAME":"ZINFLATION_SERVICES_EXPOSE",
     "VERSION":"A",
-    "SOURCE":"@EndUserText.label: 'Enflasyon Muhasebesi Service Definitions'\r\ndefine service ZINFLATION_SERVICES_EXPOSE {\r\n  expose ZINF_C_001   as IndexOranlari;\r\n  expose ZINF_C_003   as DegerlenecekHesaplar;\r\n  expose ZINF_C_005   as BakiyeDevirBakim;\r\n  expose ZINF_C_007   as HesapBelirleme;\r\n  expose ZINF_C_009   as MaliyetHesaplari;\r\n  expose ZINF_C_010   as OranTurleri;\r\n  expose ZINF_C_012   as SmmHesaplar;\r\n  expose ZINF_C_013   as StokDevirHizi;\r\n  expose ZINF_C_014   as Donemsellestirme;\r\n  expose ZINF_C_015   as BapiCustomizing;\r\n  expose ZINF_C_016   as DuranVarlikSatisTurleri;\r\n  expose ZINF_C_018   as DegerlemeyeTabiOlmayanDv;\r\n  expose ZINF_C_023   as DepreciationAreaMapping;\r\n  expose ZINF_C_024   as IstisnaDv;\r\n  expose ZINF_C_025   as ManuelEntryForCoefficent;\r\n  expose ZINF_C_026   as BakiyeGecisTablosu;\r\n  expose ZINF_C_USERS as WebServiceUsers;\r\n}"
+    "SOURCE":"@EndUserText.label: 'Enflasyon Muhasebesi Service Definitions'\r\ndefine service ZINFLATION_SERVICES_EXPOSE {\r\n  expose ZINF_C_001   as IndexOranlari;\r\n  expose ZINF_C_003   as DegerlenecekHesaplar;\r\n  expose ZINF_C_005   as BakiyeDevirBakim;\r\n  expose ZINF_C_007   as HesapBelirleme;\r\n  expose ZINF_C_009   as MaliyetHesaplari;\r\n  expose ZINF_C_010   as OranTurleri;\r\n  expose ZINF_C_012   as SmmHesaplar;\r\n  expose ZINF_C_013   as StokDevirHizi;\r\n  expose ZINF_C_014   as Donemsellestirme;\r\n  expose ZINF_C_015   as BapiCustomizing;\r\n  expose ZINF_C_016   as DuranVarlikSatisTurleri;\r\n  expose ZINF_C_018   as DegerlemeyeTabiOlmayanDv;\r\n  expose ZINF_C_023   as DepreciationAreaMapping;\r\n  expose ZINF_C_024   as IstisnaDv;\r\n  expose ZINF_C_025   as ManuelEntryForCoefficent;\r\n  expose ZINF_C_026   as BakiyeGecisTablosu;\r\n  expose ZINF_C_027   as TersCalisanHesaplar;\r\n  expose ZINF_C_028   as TersBakiyeTablosu;\r\n  expose ZINF_C_USERS as WebServiceUsers;\r\n}"
    }
   ]
  },
@@ -213,6 +213,24 @@
    {
     "SRVDNAME":"ZINFLATION_SERVICES_EXPOSE",
     "SERVICE":"ZINFLATION_SERVICES_EXPOSE",
+    "EXPOSED_ARTIFACT":"ZINF_C_027",
+    "EXPOSED_ARTIFACT_TYPE":"E",
+    "EXPOSED_ALIAS":"TERSCALISANHESAPLAR",
+    "EXPOSED_ALIAS_RAW":"TersCalisanHesaplar",
+    "INCL_SERVICE":""
+   },
+   {
+    "SRVDNAME":"ZINFLATION_SERVICES_EXPOSE",
+    "SERVICE":"ZINFLATION_SERVICES_EXPOSE",
+    "EXPOSED_ARTIFACT":"ZINF_C_028",
+    "EXPOSED_ARTIFACT_TYPE":"E",
+    "EXPOSED_ALIAS":"TERSBAKIYETABLOSU",
+    "EXPOSED_ALIAS_RAW":"TersBakiyeTablosu",
+    "INCL_SERVICE":""
+   },
+   {
+    "SRVDNAME":"ZINFLATION_SERVICES_EXPOSE",
+    "SERVICE":"ZINFLATION_SERVICES_EXPOSE",
     "EXPOSED_ARTIFACT":"ZINF_C_USERS",
     "EXPOSED_ARTIFACT_TYPE":"E",
     "EXPOSED_ALIAS":"WEBSERVICEUSERS",
@@ -230,8 +248,8 @@
     "SERVICE":"ZINFLATION_SERVICES_EXPOSE",
     "SERVICE_RAW":"ZINFLATION_SERVICES_EXPOSE",
     "SOURCE_TYPE":"S",
-    "DT_UUID":"03C4E1D494DB1EDEBD8B555C54F19FDB",
-    "RT_HASH":"C9FBA2E64148F383C06F3A3DCE67CD401C8DB854",
+    "DT_UUID":"5B80129E71491EEF8E8C17567E2400CF",
+    "RT_HASH":"797B0FC3B6B076CF15D2437DED2B47D119A85D61",
     "GEN_VERSION":"0"
    }
   ]

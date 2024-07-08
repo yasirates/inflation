@@ -139,7 +139,7 @@
     lv_date3 = lv_date1 - <lfs_business_data>-stock_trans_speed_d.
 
     <lfs_business_data>-stock_trans_speed_m =  lv_date3(4) && '0' && lv_date3+4(2).
-
+    <lfs_business_data>-rldnr = iv_rldnr.
     MODIFY zinf_t013 FROM TABLE @mt_business_data.
     IF sy-subrc IS INITIAL.
       COMMIT WORK AND WAIT.

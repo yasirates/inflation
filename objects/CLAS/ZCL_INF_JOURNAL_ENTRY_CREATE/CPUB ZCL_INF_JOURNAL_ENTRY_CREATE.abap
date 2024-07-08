@@ -3,17 +3,6 @@ CLASS zcl_inf_journal_entry_create DEFINITION
   CREATE PUBLIC .
 
   PUBLIC SECTION.
-
-*    TYPES : BEGIN OF mty_xml,
-*              DocumentDate              TYPE string,
-*              PostingDate               TYPE string,
-*              DocumentReferenceID       TYPE string,
-*              companycode               TYPE string,
-*              ReversalReferenceDocument TYPE string,
-*              AccountingDocument        TYPE string,
-*              FiscalYear                TYPE string,
-*            END OF mty_xml.
-
     TYPES : BEGIN OF mty_xml,
               uuid               TYPE string,
               AccountingDocument TYPE string,

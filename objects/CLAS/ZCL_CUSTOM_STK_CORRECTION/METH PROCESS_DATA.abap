@@ -24,6 +24,8 @@
     ENDIF.
 
     LOOP AT mt_stock INTO ls_stock.
+      CLEAR : lv_date2 .
+
       ms_log-uuid             = cl_system_uuid=>create_uuid_c36_static( ).
       ms_log-bukrs            = mv_company_code.
 *      ms_log-waers               = gv_waers.
@@ -95,8 +97,10 @@
           lv_date2 = gv_date1(4) && '09' && '30' .
         ENDIF.
 
-        CLEAR ms_bank_report.
-        READ TABLE mt_t001 INTO ms_bank_report WITH KEY rate_type = mv_rtype
+        ms_log-stock_trans_speed_m = lv_date2(4) && |0|  && lv_date2+4(2).
+
+        CLEAR ms_bank_bort.
+        READ TABLE mt_t001 INTO ms_bank_bort WITH KEY rate_type = mv_rtype
                                                         budat     = lv_date2.
 
         IF sy-subrc IS INITIAL.

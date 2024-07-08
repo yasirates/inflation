@@ -1,0 +1,1 @@
+CLASS zbp_inf_custom_reverse_hkont DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zinf_custom_reverse_hkont.

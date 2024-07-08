@@ -9,7 +9,7 @@
     "AS4USER":"SAP_CUSTOMER",
     "AS4DATE":"0000-00-00",
     "AS4TIME":"00:00:00",
-    "SOURCE":"@EndUserText.label: 'Stok Düzeltme Programı'\r\n@ObjectModel.query.implementedBy: 'ABAP:ZCL_CUSTOM_STK_CORRECTION'\r\n@UI: {\r\npresentationVariant: [ { visualizations: [ { type: #AS_LINEITEM } ], maxItems: 5000 } ] }\r\n\r\ndefine root custom entity ZINF_CUSTOM_STK_CORRECTION\r\n{\r\n  key uuid                : sysuuid_c36;\r\n\r\n      @UI                 : { lineItem: [ { position: 10 , label: 'Şirket Kodu' } ]  ,selectionField   : [ {position : 10 }] }\r\n      @Consumption        : {\r\n       valueHelpDefinition:[{ entity :{ name :'I_CompanyCodeVH', element: 'CompanyCode' } } ],\r\n       filter             : {selectionType: #SINGLE, multipleSelections: false, mandatory: true } }\r\n  key bukrs               : bukrs;\r\n\r\n      @UI                 : { lineItem: [ { position: 20 , label: 'Rapor Dönemi' , exclude: true }],  selectionField : [{ position : 20}] }\r\n      @Semantics.fiscal.yearPeriod: true\r\n      @Consumption        : {\r\n                filter    : {selectionType: #SINGLE, multipleSelections: false, mandatory: true }\r\n      }\r\n  key rspmon              : fins_fyearperiod;\r\n\r\n      @UI                 : { lineItem: [ { position: 30 , label: 'Defter' , exclude: true }] , selectionField : [{ position : 30 }] }\r\n      @Consumption        : {\r\n       valueHelpDefinition:[{ entity :{ name :'I_Ledger', element: 'Ledger' } } ],\r\n       filter             : {selectionType: #SINGLE, multipleSelections: false, mandatory: true }\r\n      }\r\n  key rldnr               : zinf_e_rldnr;\r\n\r\n      @UI                 : { lineItem: [ { position: 40 , label: 'Oran Türü' , exclude: true }],selectionField : [{ position : 40 }] }\r\n      @Consumption        : {\r\n      valueHelpDefinition :[{ entity :{ name :'ZINF_VH_RATES', element: 'Value' } } ],\r\n      filter              : {selectionType: #SINGLE, multipleSelections: false, mandatory: true } }\r\n  key rtype               : zinf_e_rate_type;\r\n\r\n      @EndUserText.label  : 'Ana Hesap'\r\n      @Consumption.valueHelpDefinition:[{ entity :{ name    : 'I_GLAccountStdVH', element : 'GLAccount' } }]\r\n      @UI                 : { lineItem: [ { position: 50 , label: 'Ana Hesap' }],selectionField : [{ position : 50 }]}\r\n  key stock_hkont         : zinf_e_saknr;\r\n\r\n      @UI                 : { lineItem: [ { position: 60 , label: 'G/L Account Text' }] }\r\n      txt50               : zinf_e_txt50;\r\n\r\n      @EndUserText.label  : 'Basit Ortalama Yöntemi'\r\n      @UI                 : { lineItem: [ { position: 65 , label: 'Basit Ortalama Yöntem' }],selectionField : [{ position : 65 }] }\r\n      avarage_method      : abap_boolean;\r\n\r\n      @UI                 : { lineItem: [ { position: 70 , label: 'Belge türü' }] }\r\n      blart               : zinf_e_blart;\r\n\r\n      @UI                 : { lineItem: [ { position: 80 , label: 'Muhasebe İlkeleri', exclude: true }] }\r\n      acc_principle       : zinf_e_accounting_principle;\r\n\r\n      @UI                 : { lineItem: [ { position: 90 , label: 'Stok Tutarı' }] }\r\n      stock_balance       : zinf_e_stock_balance;\r\n\r\n      @UI                 : { lineItem: [ { position: 100 , label: 'Ortalama Endeks' , exclude: true }] }\r\n      avr_endex           : zinf_e_avr_endex;\r\n\r\n      @Semantics.fiscal.yearPeriod: true\r\n      @UI                 : { lineItem: [ { position: 110 , label: 'Devir ay' }] }\r\n      stock_trans_speed_m : fins_fyearperiod;\r\n\r\n      @UI                 : { lineItem: [ { position: 120 , label: 'Katsayı' }] }\r\n      factor              : zinf_e_factor;\r\n\r\n      @UI                 : { lineItem: [ { position: 130 , label: 'Ortalama Katsayı' , exclude: true }] }\r\n      avr_factor          : zinf_e_avr_factor;\r\n\r\n      @UI                 : { lineItem: [ { position: 140 , label: 'Endeks Tutarı' }] }\r\n      endex_balance       : zinf_e_endex_balance;\r\n\r\n      @UI                 : { lineItem: [ { position: 150 , label: 'Düzeltme Farkı' }] }\r\n      correct_balance     : zinf_e_correct_balance;\r\n\r\n      @UI                 : { lineItem: [ { position: 160 , label: 'Düzeltme Hesabı BS' }] }\r\n      correct_hkont_bs    : zinf_e_correct_hkont_bs;\r\n\r\n      @UI                 : { lineItem: [ { position: 170 , label: 'Düzeltme Hesabı PL' }] }\r\n      correct_hkont_pl    : zinf_e_correct_hkont_pl;\r\n\r\n      @UI                 : { lineItem: [ { position:175 , label: 'Toplam Tutar' }] }\r\n      total_amount        : zinf_e_total_amount;\r\n\r\n      @UI                 : { lineItem: [ { position: 180 , label: 'Belge Numarası' }] }\r\n      belnr               : belnr_d;\r\n\r\n      @UI                 : { lineItem: [ { position: 190 , label: 'Mali Yıl' }] }\r\n      gjahr               : gjahr;\r\n\r\n      @UI                 : { lineItem: [ { position: 200 , label: 'Ters Belge' , exclude: true }] }\r\n      rev_belnr           : zinf_e_rev_belnr;\r\n\r\n      @UI                 : { lineItem: [ { position: 210 , label: 'Ters Yıl' , exclude: true }] }\r\n      rev_gjahr           : zinf_e_rev_gjahr;\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
+    "SOURCE":"@EndUserText.label: 'Stok Düzeltme Programı'\r\n@ObjectModel.query.implementedBy: 'ABAP:ZCL_CUSTOM_STK_CORRECTION'\r\n@UI: {\r\npresentationVariant: [ { visualizations: [ { type: #AS_LINEITEM } ], maxItems: 5000 } ] }\r\n@ObjectModel.resultSet.sizeCategory:#XS\r\n\r\ndefine root custom entity ZINF_CUSTOM_STK_CORRECTION\r\n{\r\n  key uuid                : sysuuid_c36;\r\n\r\n      @UI                 : { lineItem: [ { position: 10 , label: 'Şirket Kodu' } ]  ,selectionField   : [ {position : 10 }] }\r\n      @Consumption        : {\r\n       valueHelpDefinition:[{ entity :{ name :'I_CompanyCodeVH', element: 'CompanyCode' } } ],\r\n       filter             : {selectionType: #SINGLE, multipleSelections: false, mandatory: true } }\r\n  key bukrs               : bukrs;\r\n\r\n      @UI                 : { lineItem: [ { position: 20 , label: 'Rapor Dönemi' , exclude: true }],  selectionField : [{ position : 20}] }\r\n      @Semantics.fiscal.yearPeriod: true\r\n      @Consumption        : {\r\n                filter    : {selectionType: #SINGLE, multipleSelections: false, mandatory: true }\r\n      }\r\n  key rspmon              : fins_fyearperiod;\r\n\r\n      @UI                 : { lineItem: [ { position: 30 , label: 'Defter' , exclude: true }] , selectionField : [{ position : 30 }] }\r\n      @Consumption        : {\r\n       valueHelpDefinition:[{ entity :{ name :'I_Ledger', element: 'Ledger' } } ],\r\n       filter             : {selectionType: #SINGLE, multipleSelections: false, mandatory: true }\r\n      }\r\n  key rldnr               : zinf_e_rldnr;\r\n\r\n      @UI                 : { lineItem: [ { position: 40 , label: 'Oran Türü' , exclude: true }],selectionField : [{ position : 40 }] }\r\n      @Consumption        : {\r\n      valueHelpDefinition :[{ entity :{ name :'ZINF_VH_RATES', element: 'Value' } } ],\r\n      filter              : {selectionType: #SINGLE, multipleSelections: false, mandatory: true } }\r\n  key rtype               : zinf_e_rate_type;\r\n\r\n      @EndUserText.label  : 'Ana Hesap'\r\n      @Consumption.valueHelpDefinition:[{ entity :{ name    : 'I_GLAccountStdVH', element : 'GLAccount' } }]\r\n      @UI                 : { lineItem: [ { position: 50 , label: 'Ana Hesap' }],selectionField : [{ position : 50 }]}\r\n  key stock_hkont         : zinf_e_saknr;\r\n\r\n      @UI                 : { lineItem: [ { position: 60 , label: 'G/L Account Text' }] }\r\n      txt50               : zinf_e_txt50;\r\n\r\n      @EndUserText.label  : 'Basit Ortalama Yöntemi'\r\n      @UI                 : { lineItem: [ { position: 65 , label: 'Basit Ortalama Yöntem' , exclude: true }],selectionField : [{ position : 65 }] }\r\n      avarage_method      : abap_boolean;\r\n\r\n      @UI                 : { lineItem: [ { position: 70 , label: 'Belge türü' }] }\r\n      blart               : zinf_e_blart;\r\n\r\n      @UI                 : { lineItem: [ { position: 80 , label: 'Muhasebe İlkeleri', exclude: true }] }\r\n      acc_principle       : zinf_e_accounting_principle;\r\n\r\n      @UI                 : { lineItem: [ { position: 90 , label: 'Stok Tutarı' }] }\r\n      stock_balance       : zinf_e_stock_balance;\r\n\r\n      @UI                 : { lineItem: [ { position: 100 , label: 'Ortalama Endeks' , exclude: true }] }\r\n      avr_endex           : zinf_e_avr_endex;\r\n\r\n      @Semantics.fiscal.yearPeriod: true\r\n      @UI                 : { lineItem: [ { position: 110 , label: 'Devir ay' }] }\r\n      stock_trans_speed_m : fins_fyearperiod;\r\n\r\n      @UI                 : { lineItem: [ { position: 120 , label: 'Katsayı' }] }\r\n      factor              : zinf_e_factor;\r\n\r\n      @UI                 : { lineItem: [ { position: 130 , label: 'Ortalama Katsayı' , exclude: true }] }\r\n      avr_factor          : zinf_e_avr_factor;\r\n\r\n      @UI                 : { lineItem: [ { position: 140 , label: 'Endeks Tutarı' }] }\r\n      endex_balance       : zinf_e_endex_balance;\r\n\r\n      @UI                 : { lineItem: [ { position: 150 , label: 'Düzeltme Farkı' }] }\r\n      correct_balance     : zinf_e_correct_balance;\r\n\r\n      @UI                 : { lineItem: [ { position: 160 , label: 'Düzeltme Hesabı BS' }] }\r\n      correct_hkont_bs    : zinf_e_correct_hkont_bs;\r\n\r\n      @UI                 : { lineItem: [ { position: 170 , label: 'Düzeltme Hesabı PL' }] }\r\n      correct_hkont_pl    : zinf_e_correct_hkont_pl;\r\n\r\n      @UI                 : { lineItem: [ { position:175 , label: 'Toplam Tutar' }] }\r\n      total_amount        : zinf_e_total_amount;\r\n\r\n      @UI                 : { lineItem: [ { position: 180 , label: 'Belge Numarası' }] }\r\n      belnr               : belnr_d;\r\n\r\n      @UI                 : { lineItem: [ { position: 190 , label: 'Mali Yıl' }] }\r\n      gjahr               : gjahr;\r\n\r\n      @UI                 : { lineItem: [ { position: 200 , label: 'Ters Belge' , exclude: true }] }\r\n      rev_belnr           : zinf_e_rev_belnr;\r\n\r\n      @UI                 : { lineItem: [ { position: 210 , label: 'Ters Yıl' , exclude: true }] }\r\n      rev_gjahr           : zinf_e_rev_gjahr;\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
     "CHGFLAG":"",
@@ -340,28 +340,28 @@
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"ACC_PRINCIPLE",
     "NAME":"UI",
-    "POSITION":73,
+    "POSITION":74,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"ACC_PRINCIPLE",
     "NAME":"UI.LINEITEM$1$.EXCLUDE",
-    "POSITION":76,
+    "POSITION":77,
     "VALUE":"true"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"ACC_PRINCIPLE",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":75,
+    "POSITION":76,
     "VALUE":"'Muhasebe İlkeleri'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"ACC_PRINCIPLE",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":74,
+    "POSITION":75,
     "VALUE":"80"
    },
    {
@@ -388,6 +388,13 @@
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"AVARAGE_METHOD",
+    "NAME":"UI.LINEITEM$1$.EXCLUDE",
+    "POSITION":69,
+    "VALUE":"true"
+   },
+   {
+    "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
+    "LFIELDNAME":"AVARAGE_METHOD",
     "NAME":"UI.LINEITEM$1$.LABEL",
     "POSITION":68,
     "VALUE":"'Basit Ortalama Yöntem'"
@@ -403,105 +410,105 @@
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"AVARAGE_METHOD",
     "NAME":"UI.SELECTIONFIELD$1$.POSITION",
-    "POSITION":69,
+    "POSITION":70,
     "VALUE":"65"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"AVR_ENDEX",
     "NAME":"UI",
-    "POSITION":80,
+    "POSITION":81,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"AVR_ENDEX",
     "NAME":"UI.LINEITEM$1$.EXCLUDE",
-    "POSITION":83,
+    "POSITION":84,
     "VALUE":"true"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"AVR_ENDEX",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":82,
+    "POSITION":83,
     "VALUE":"'Ortalama Endeks'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"AVR_ENDEX",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":81,
+    "POSITION":82,
     "VALUE":"100"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"AVR_FACTOR",
     "NAME":"UI",
-    "POSITION":92,
+    "POSITION":93,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"AVR_FACTOR",
     "NAME":"UI.LINEITEM$1$.EXCLUDE",
-    "POSITION":95,
+    "POSITION":96,
     "VALUE":"true"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"AVR_FACTOR",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":94,
+    "POSITION":95,
     "VALUE":"'Ortalama Katsayı'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"AVR_FACTOR",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":93,
+    "POSITION":94,
     "VALUE":"130"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"BELNR",
     "NAME":"UI",
-    "POSITION":111,
+    "POSITION":112,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"BELNR",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":113,
+    "POSITION":114,
     "VALUE":"'Belge Numarası'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"BELNR",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":112,
+    "POSITION":113,
     "VALUE":"180"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"BLART",
     "NAME":"UI",
-    "POSITION":70,
+    "POSITION":71,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"BLART",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":72,
+    "POSITION":73,
     "VALUE":"'Belge türü'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"BLART",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":71,
+    "POSITION":72,
     "VALUE":"70"
    },
    {
@@ -592,182 +599,182 @@
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"CORRECT_BALANCE",
     "NAME":"UI",
-    "POSITION":99,
+    "POSITION":100,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"CORRECT_BALANCE",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":101,
+    "POSITION":102,
     "VALUE":"'Düzeltme Farkı'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"CORRECT_BALANCE",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":100,
+    "POSITION":101,
     "VALUE":"150"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"CORRECT_HKONT_BS",
     "NAME":"UI",
-    "POSITION":102,
+    "POSITION":103,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"CORRECT_HKONT_BS",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":104,
+    "POSITION":105,
     "VALUE":"'Düzeltme Hesabı BS'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"CORRECT_HKONT_BS",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":103,
+    "POSITION":104,
     "VALUE":"160"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"CORRECT_HKONT_PL",
     "NAME":"UI",
-    "POSITION":105,
+    "POSITION":106,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"CORRECT_HKONT_PL",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":107,
+    "POSITION":108,
     "VALUE":"'Düzeltme Hesabı PL'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"CORRECT_HKONT_PL",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":106,
+    "POSITION":107,
     "VALUE":"170"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"ENDEX_BALANCE",
     "NAME":"UI",
-    "POSITION":96,
+    "POSITION":97,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"ENDEX_BALANCE",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":98,
+    "POSITION":99,
     "VALUE":"'Endeks Tutarı'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"ENDEX_BALANCE",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":97,
+    "POSITION":98,
     "VALUE":"140"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"FACTOR",
     "NAME":"UI",
-    "POSITION":89,
+    "POSITION":90,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"FACTOR",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":91,
+    "POSITION":92,
     "VALUE":"'Katsayı'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"FACTOR",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":90,
+    "POSITION":91,
     "VALUE":"120"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"GJAHR",
     "NAME":"UI",
-    "POSITION":114,
+    "POSITION":115,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"GJAHR",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":116,
+    "POSITION":117,
     "VALUE":"'Mali Yıl'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"GJAHR",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":115,
+    "POSITION":116,
     "VALUE":"190"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"REV_BELNR",
     "NAME":"UI",
-    "POSITION":117,
+    "POSITION":118,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"REV_BELNR",
     "NAME":"UI.LINEITEM$1$.EXCLUDE",
-    "POSITION":120,
+    "POSITION":121,
     "VALUE":"true"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"REV_BELNR",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":119,
+    "POSITION":120,
     "VALUE":"'Ters Belge'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"REV_BELNR",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":118,
+    "POSITION":119,
     "VALUE":"200"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"REV_GJAHR",
     "NAME":"UI",
-    "POSITION":121,
+    "POSITION":122,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"REV_GJAHR",
     "NAME":"UI.LINEITEM$1$.EXCLUDE",
-    "POSITION":124,
+    "POSITION":125,
     "VALUE":"true"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"REV_GJAHR",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":123,
+    "POSITION":124,
     "VALUE":"'Ters Yıl'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"REV_GJAHR",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":122,
+    "POSITION":123,
     "VALUE":"210"
    },
    {
@@ -1040,21 +1047,21 @@
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"STOCK_BALANCE",
     "NAME":"UI",
-    "POSITION":77,
+    "POSITION":78,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"STOCK_BALANCE",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":79,
+    "POSITION":80,
     "VALUE":"'Stok Tutarı'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"STOCK_BALANCE",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":78,
+    "POSITION":79,
     "VALUE":"90"
    },
    {
@@ -1131,56 +1138,56 @@
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"STOCK_TRANS_SPEED_M",
     "NAME":"SEMANTICS",
-    "POSITION":84,
+    "POSITION":85,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"STOCK_TRANS_SPEED_M",
     "NAME":"SEMANTICS.FISCAL.YEARPERIOD",
-    "POSITION":85,
+    "POSITION":86,
     "VALUE":"true"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"STOCK_TRANS_SPEED_M",
     "NAME":"UI",
-    "POSITION":86,
+    "POSITION":87,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"STOCK_TRANS_SPEED_M",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":88,
+    "POSITION":89,
     "VALUE":"'Devir ay'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"STOCK_TRANS_SPEED_M",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":87,
+    "POSITION":88,
     "VALUE":"110"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"TOTAL_AMOUNT",
     "NAME":"UI",
-    "POSITION":108,
+    "POSITION":109,
     "VALUE":""
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"TOTAL_AMOUNT",
     "NAME":"UI.LINEITEM$1$.LABEL",
-    "POSITION":110,
+    "POSITION":111,
     "VALUE":"'Toplam Tutar'"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "LFIELDNAME":"TOTAL_AMOUNT",
     "NAME":"UI.LINEITEM$1$.POSITION",
-    "POSITION":109,
+    "POSITION":110,
     "VALUE":"175"
    },
    {
@@ -1397,9 +1404,21 @@
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
+    "NAME":"OBJECTMODEL",
+    "POSITION":8,
+    "VALUE":""
+   },
+   {
+    "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
     "NAME":"OBJECTMODEL.QUERY.IMPLEMENTEDBY",
     "POSITION":4,
     "VALUE":"'ABAP:ZCL_CUSTOM_STK_CORRECTION'"
+   },
+   {
+    "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",
+    "NAME":"OBJECTMODEL.RESULTSET.SIZECATEGORY",
+    "POSITION":9,
+    "VALUE":"#XS"
    },
    {
     "STRUCOBJN":"ZINF_CUSTOM_STK_CORRECTION",

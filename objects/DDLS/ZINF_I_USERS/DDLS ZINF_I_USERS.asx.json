@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Web Servis Kullanıcı Bilgileri'\r\n@Metadata.ignorePropagatedAnnotations: true\r\ndefine root view entity ZINF_I_USERS\r\n  as select from zinf_users\r\n{\r\n\r\n  key service_id  as ServiceId,\r\n      service_url as ServiceUrl,\r\n      username    as Username,\r\n      password    as Password\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZINF_USERS\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"J,W4T2",
+    "CHGFLAG":"",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"
@@ -41,6 +41,12 @@
     "DDLANGUAGE":"E",
     "AS4LOCAL":"N",
     "DDTEXT":"Web Servis Kullanıcı Bilgileri"
+   },
+   {
+    "DDLNAME":"ZINF_I_USERS",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "DDTEXT":""
    }
   ]
  },

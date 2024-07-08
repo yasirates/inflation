@@ -7,9 +7,9 @@
     "DDLXNAME":"ZINF_C_USERS",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2024-01-23",
-    "CHANGED_AT":"10:52:51",
-    "UUID":"975514DE67321EDEAEBBB1B1AD50DF1B",
+    "CHANGED_ON":"2024-06-03",
+    "CHANGED_AT":"13:15:13",
+    "UUID":"4D5EAEBF6DC31EEF88B569F4A6E94086",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"ZINF_C_USERS",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #PARTNER\r\n\r\n@UI: { headerInfo: { typeName : 'Username',\r\n                     typeNamePlural : 'Adı',\r\n                     title :{ type : #STANDARD, label: 'Web Servis Kullanıcı Bilgileri', value: 'Username' } }\r\n}\r\nannotate view ZINF_C_USERS with\r\n{\r\n  @UI.facet: [{ id : 'Username',\r\n                    purpose : #STANDARD,\r\n                    type: #IDENTIFICATION_REFERENCE,\r\n                    label : 'Web Servis Kullanıcı Bilgileri',\r\n                    position : 10 }]\r\n\r\n\r\n  @UI: { lineItem: [{ position: 10, label: 'Service ID' }], identification: [{ position: 10, label:'Service ID'  }],selectionField: [{ position: 10 }] }\r\n  ServiceId;\r\n\r\n  @UI: { lineItem: [{ position: 20, label: 'Service URL' }], identification: [{ position: 20, label:'Service URL'  }],selectionField: [{ position: 20 }] }\r\n  ServiceUrl;\r\n\r\n  @UI: { lineItem: [{ position: 30, label: 'Kullanıcı Adı' }], identification: [{ position: 30, label:'Kullanıcı Adı'  }],selectionField: [{ position: 30 }] }\r\n  Username;\r\n\r\n  @UI: { lineItem: [{ position: 40, label: 'Şifre' }], identification: [{ position: 40, label:'Şifre'  }],selectionField: [{ position: 40 }] }\r\n//  @UI.masked: true\r\n  Password;\r\n\r\n\r\n}"
+    "SOURCE":"@Metadata.layer: #PARTNER\r\n\r\n@UI: { headerInfo: { typeName : 'Username',\r\n                     typeNamePlural : 'Adı',\r\n                     title :{ type : #STANDARD, label: 'Web Servis Kullanıcı Bilgileri', value: 'Username' } }\r\n}\r\nannotate view ZINF_C_USERS with\r\n{\r\n  @UI.facet: [{ id : 'Username',\r\n                    purpose : #STANDARD,\r\n                    type: #IDENTIFICATION_REFERENCE,\r\n                    label : 'Web Servis Kullanıcı Bilgileri',\r\n                    position : 10 }]\r\n\r\n\r\n  @UI: { lineItem: [{ position: 10, label: 'Service ID' }], identification: [{ position: 10, label:'Service ID'  }],selectionField: [{ position: 10 }] }\r\n  ServiceId;\r\n\r\n  @UI: { lineItem: [{ position: 20, label: 'Service URL' }], identification: [{ position: 20, label:'Service URL'  }],selectionField: [{ position: 20 }] }\r\n  ServiceUrl;\r\n\r\n  @UI: { lineItem: [{ position: 30, label: 'Kullanıcı Adı' }], identification: [{ position: 30, label:'Kullanıcı Adı'  }],selectionField: [{ position: 30 }] }\r\n  Username;\r\n\r\n  @UI: { lineItem: [{ position: 40, label: 'Şifre', exclude: true }], identification: [{ position: 40, label:'Şifre'  }],selectionField: [{ position: 40 }]  }\r\n  @UI.masked: true\r\n  Password;\r\n\r\n\r\n}"
    }
   ]
  },
@@ -94,6 +94,13 @@
    {
     "DDLXNAME":"ZINF_C_USERS",
     "ELEMENT":"PASSWORD",
+    "NAME":"UI.LINEITEM$1$.EXCLUDE",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"true"
+   },
+   {
+    "DDLXNAME":"ZINF_C_USERS",
+    "ELEMENT":"PASSWORD",
     "NAME":"UI.LINEITEM$1$.LABEL",
     "ELEMENT_TYPE":"S",
     "VALUE":"'Şifre'"
@@ -104,6 +111,13 @@
     "NAME":"UI.LINEITEM$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"40"
+   },
+   {
+    "DDLXNAME":"ZINF_C_USERS",
+    "ELEMENT":"PASSWORD",
+    "NAME":"UI.MASKED",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"true"
    },
    {
     "DDLXNAME":"ZINF_C_USERS",
@@ -353,8 +367,8 @@
     "EXTENDED_ARTIFACT":"ZINF_C_USERS",
     "VARIANT":"",
     "LAYER":4500,
-    "DT_UUID":"975514DE67321EDEAEBBB1B1AD50DF1B",
-    "RT_HASH":"67DB402D7D3E02973B5F5B013F139DAE39FBB22D",
+    "DT_UUID":"4D5EAEBF6DC31EEF88B569F4A6E94086",
+    "RT_HASH":"B1F0C5A70EC7107A29FEBAE82FC2C15454C698BD",
     "GEN_VERSION":"0"
    }
   ]
