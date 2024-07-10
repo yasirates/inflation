@@ -71,14 +71,28 @@
     DATA lv_rspmon_stock_total TYPE  bapicurr_d.
     DATA lv_cspmon_stock_total TYPE  bapicurr_d.
 
+    DATA(lv_xrspmon) = iv_rspmon(4) && iv_rspmon+5(2).
+    DATA(lv_crspmon) = iv_cspmon(4) && iv_cspmon+5(2).
+
+
+
     LOOP AT mt_stock_balance INTO DATA(ls_stock_balance).
-      IF ls_stock_balance-fisc_year  LE iv_rspmon(4) AND
-         ls_stock_balance-fis_period LE iv_rspmon+5(2).
+      DATA(lv_stock_spmon) = ls_stock_balance-fisc_year(4) && ls_stock_balance-fis_period.
+*      IF ls_stock_balance-fisc_year  LE iv_rspmon(4) AND
+*         ls_stock_balance-fis_period LE iv_rspmon+5(2).
+*        lv_rspmon_stock_total += ls_stock_balance-balance.
+*      ENDIF.
+
+      IF lv_stock_spmon LE lv_xrspmon.
         lv_rspmon_stock_total += ls_stock_balance-balance.
       ENDIF.
 
-      IF ls_stock_balance-fisc_year  LE iv_cspmon(4) AND
-         ls_stock_balance-fis_period LE iv_cspmon+5(2).
+*      IF ls_stock_balance-fisc_year  LE iv_cspmon(4) AND
+*         ls_stock_balance-fis_period LE iv_cspmon+5(2).
+*        lv_cspmon_stock_total += ls_stock_balance-balance.
+*      ENDIF.
+
+      IF lv_stock_spmon LE lv_crspmon.
         lv_cspmon_stock_total += ls_stock_balance-balance.
       ENDIF.
     ENDLOOP.

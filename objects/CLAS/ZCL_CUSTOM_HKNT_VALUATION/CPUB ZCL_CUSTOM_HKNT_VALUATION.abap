@@ -7,6 +7,7 @@ CLASS zcl_custom_hknt_valuation DEFINITION
 
     INTERFACES if_oo_adt_classrun .
     INTERFACES if_rap_query_provider.
+    INTERFACES if_rap_query_paging.
 
 
     CONSTANTS mc_begda TYPE datum VALUE '20000101'.

@@ -46,6 +46,7 @@
     CLEAR ms_xml.
     READ TABLE mt_xml INTO ms_xml INDEX 1.
     IF sy-subrc IS INITIAL.
+      CHECK ms_xml-accountingdocument NE '0000000000'.
       CASE iv_prog.
         WHEN '01'.
           UPDATE zinf_t008 SET belnr = @ms_xml-accountingdocument,
