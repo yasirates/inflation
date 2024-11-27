@@ -12,7 +12,7 @@
     "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Stok Devir Hızı Manuel Giriş'\r\ndefine root view entity ZINF_I_STK_TO_MNL\r\n  as select from zinf_t013\r\n{\r\n\r\n  key bukrs               as Bukrs,\r\n  key rldnr               as Rldnr,\r\n      @Semantics.fiscal.yearPeriod: true\r\n  key rspmon              as Rspmon,\r\n  key acc_type            as AccType,\r\n      @Semantics.fiscal.yearPeriod: true\r\n  key cspmon              as Cspmon,\r\n      waers               as Waers,\r\n      stock_balance       as StockBalance,\r\n      cost_balance        as CostBalance,\r\n      stock_trans_speed   as StockTransSpeed,\r\n      stock_trans_speed_d as StockTransSpeedD,\r\n      @Semantics.fiscal.yearPeriod: true\r\n      stock_trans_speed_m as StockTransSpeedM\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZINF_T013\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"",
+    "CHGFLAG":"J,WT42",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

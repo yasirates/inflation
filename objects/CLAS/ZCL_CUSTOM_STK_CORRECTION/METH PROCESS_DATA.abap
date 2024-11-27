@@ -26,7 +26,12 @@
     LOOP AT mt_stock INTO ls_stock.
       CLEAR : lv_date2 .
 
-      ms_log-uuid             = cl_system_uuid=>create_uuid_c36_static( ).
+      TRY.
+          ms_log-uuid             = cl_system_uuid=>create_uuid_c36_static( ).
+        CATCH cx_uuid_error.
+          "handle exception
+      ENDTRY.
+
       ms_log-bukrs            = mv_company_code.
 *      ms_log-waers               = gv_waers.
       ms_log-rspmon           = mv_period.
@@ -77,7 +82,7 @@
                                                      budat     = lv_date2.
       CLEAR lv_date2.
       DATA: lv_year TYPE gjahr.
-      IF mv_avarage_method EQ abap_true .
+      IF mv_avarage_method EQ 'true' .
         CLEAR:lv_year,lv_date2.
 
         IF ( gv_date1+4(2) EQ '01' OR
@@ -157,9 +162,29 @@
         ms_log-correct_balance = ms_log-endex_balance - ms_log-stock_balance.
       ENDIF.
 
+      IF ms_log-endex_balance IS INITIAL.
+        CLEAR ms_log.
+        CONTINUE.
+      ENDIF.
+
+      IF ms_log-endex_balance < 0 OR ms_log-factor < 1.
+        ms_log-endex_balance = ms_log-endex_balance * -1.
+      ENDIF.
+
+      IF ms_log-correct_balance < 0 OR ms_log-factor < 1.
+        ms_log-correct_balance = ms_log-correct_balance * -1.
+      ENDIF.
+
+      IF ms_log-total_amount < 0 OR ms_log-factor < 1.
+        ms_log-total_amount = ms_log-total_amount * -1.
+      ENDIF.
+
+      IF ms_log-stock_balance < 0 OR ms_log-factor < 1.
+        ms_log-stock_balance = ms_log-stock_balance * -1.
+      ENDIF.
+
       APPEND ms_log TO mt_log. CLEAR ms_log.
     ENDLOOP.
-
 
     IF mt_log IS NOT INITIAL.
       MODIFY zinf_t002 FROM TABLE @mt_log.

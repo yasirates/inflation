@@ -1,6 +1,6 @@
   METHOD set_data.
-    DATA total_number_of_records TYPE int8.
-    DATA lt_main_data TYPE TABLE OF zinf_custom_stock_trans_speed.
+    DATA : total_number_of_records TYPE int8,
+           lt_main_data TYPE TABLE OF zinf_custom_stock_trans_speed.
 
     DATA(top)               = io_request->get_paging( )->get_page_size( ).
     DATA(skip)              = io_request->get_paging( )->get_offset( ).
@@ -37,7 +37,6 @@
                                           attr4 = exception_t100_key-attr4 )
             previous = exception.
     ENDTRY.
-
 
 *    IF io_request->is_total_numb_of_rec_requested(  ).
 *      total_number_of_records = lines( mt_display_data ).

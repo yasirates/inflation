@@ -6,7 +6,6 @@
 *          lv_fiscalyear          TYPE I_JournalEntry-FiscalYear,
           lv_AccountingDocument  TYPE I_JournalEntry-AccountingDocument.
 
-*    zcl_etr_regulative_common=>parse_xml(
     zinf_regulative_common=>parse_xml(
       EXPORTING
         iv_xml_string = iv_return
@@ -16,15 +15,6 @@
     LOOP AT lt_service_data ASSIGNING FIELD-SYMBOL(<lfs_service_data>).
       CHECK <lfs_service_data>-node_type EQ 'CO_NT_VALUE'.
       CASE <lfs_service_data>-name .
-*        WHEN 'DocumentReferenceID'.
-*          ms_xml-documentreferenceid = <lfs_service_data>-value.
-*        WHEN 'CompanyCode'.
-*          ms_xml-companycode         = <lfs_service_data>-value.
-*        WHEN 'DocumentDate'.
-*          ms_xml-documentDate        = <lfs_service_data>-value.
-*        WHEN 'PostingDate'.
-*          ms_xml-postingDate         = <lfs_service_data>-value.
-*          APPEND ms_xml TO mt_xml. CLEAR ms_xml.
         WHEN 'UUID'.
           ms_xml-uuid              = <lfs_service_data>-value.
         WHEN 'AccountingDocument'.

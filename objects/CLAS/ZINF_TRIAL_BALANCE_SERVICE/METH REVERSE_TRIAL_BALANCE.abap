@@ -164,7 +164,7 @@
 
         LOOP AT it_hkont INTO DATA(ls_hkont).
 
-        read table it_deger ASSIGNING FIELD-SYMBOL(<lfs_deger>) WITH KEY hkont = ls_hkont.
+          READ TABLE it_deger ASSIGNING FIELD-SYMBOL(<lfs_deger>) WITH KEY hkont = ls_hkont.
 
           lv_hkont = shift_left( val = ls_hkont sub = '0' ).
 

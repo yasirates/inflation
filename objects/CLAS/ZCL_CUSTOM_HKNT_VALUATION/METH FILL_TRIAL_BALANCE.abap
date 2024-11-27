@@ -4,9 +4,9 @@
     DATA(lv_hkont) = shift_left( val = is_deger-hkont sub = '0' ).
 
     "- geçmiş yıllara ait bakiyelerin yıl bazlı toplamları yazılır.
-    IF iv_cancel_old_balance EQ abap_false.
+    IF iv_cancel_old_balance EQ abap_true.
       LOOP AT it_sum_balance INTO DATA(ls_sum_balance) WHERE gl_account EQ lv_hkont. "fisc_year < iv_fyear.
-        CLEAR lv_balance_stock.
+        CLEAR : lv_balance_stock, ms_main_data.
         ms_main_data-uuid             = cl_system_uuid=>create_uuid_c36_static( ).
         ms_main_data-bukrs            = iv_bukrs.
         ms_main_data-budat            = iv_budat.
@@ -37,7 +37,11 @@
           ms_main_data-correct_balance = ms_main_data-endex_balance - ms_main_data-dmbtr.
         ENDIF.
 
-        APPEND ms_main_data TO mt_main_data. CLEAR ms_main_data.
+        IF ms_main_data-correct_balance IS INITIAL.
+          CLEAR ms_main_data.
+          CONTINUE.
+        ENDIF.
+        APPEND ms_main_data TO mt_main_data.
       ENDLOOP.
     ENDIF.
 
@@ -54,7 +58,7 @@
                                                  AND fisc_year  EQ lv_index_date(4)
                                                  AND fis_period EQ lv_index_date+4(2).
 
-        CLEAR lv_balance_stock.
+        CLEAR: lv_balance_stock , ms_main_data.
         ms_main_data-uuid = cl_system_uuid=>create_uuid_c36_static( ).
         ms_main_data-bukrs            = iv_bukrs.
         ms_main_data-budat            = iv_budat.
@@ -104,7 +108,11 @@
           ms_main_data-correct_balance = ms_main_data-endex_balance - ms_main_data-dmbtr.
         ENDIF.
 
-        APPEND ms_main_data TO mt_main_data. CLEAR ms_main_data.
+        IF  ms_main_data-correct_balance IS INITIAL.
+          CLEAR ms_main_data.
+          CONTINUE.
+        ENDIF.
+        APPEND ms_main_data TO mt_main_data.
       ENDLOOP.
 
       lv_index_date = mo_regulative_common->month_plus_determine( months = '-1' olddate = lv_index_date ).
@@ -124,7 +132,7 @@
     DATA(lv_hkont2) = |{ is_deger-hkont ALPHA = IN }|.
     READ TABLE mt_log INTO DATA(wa_log) WITH KEY hkont = lv_hkont2.
     IF wa_log-belnr IS NOT INITIAL.
-      CLEAR ls_balance.
+      CLEAR : ls_balance , ms_main_data.
       READ TABLE it_balance INTO ls_balance WITH KEY gl_account = lv_hkont
                                                      fisc_year  = iv_prev_date(4)
                                                      fis_period = iv_prev_date+4(2).
@@ -181,7 +189,11 @@
         ms_main_data-correct_balance = ms_main_data-endex_balance - ms_main_data-dmbtr.
       ENDIF.
 
-      APPEND ms_main_data TO mt_main_data. CLEAR ms_main_data.
+      IF ms_main_data-correct_balance IS INITIAL.
+        CLEAR ms_main_data.
+        CHECK 1 = 2.
+      ENDIF.
+      APPEND ms_main_data TO mt_main_data.
 
     ENDIF.
 
@@ -240,6 +252,10 @@
         ms_main_data-correct_balance = ms_main_data-endex_balance - ms_main_data-dmbtr.
       ENDIF.
 
+      IF ms_main_data-correct_balance IS INITIAL.
+        CLEAR ms_main_data.
+        CONTINUE.
+      ENDIF.
       APPEND ms_main_data TO mt_main_data. CLEAR ms_main_data.
     ENDLOOP.
   ENDMETHOD.

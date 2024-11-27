@@ -1,0 +1,118 @@
+[
+ {
+  "table":"DD04L",
+  "data":
+  [
+   {
+    "ROLLNAME":"ZINF_E_REVALUATION_AMOUNT",
+    "AS4LOCAL":"L",
+    "AS4VERS":0,
+    "DOMNAME":"",
+    "ROUTPUTLEN":0,
+    "MEMORYID":"",
+    "LOGFLAG":"",
+    "HEADLEN":55,
+    "SCRLEN1":10,
+    "SCRLEN2":20,
+    "SCRLEN3":40,
+    "ACTFLAG":"",
+    "APPLCLASS":"",
+    "AUTHCLASS":0,
+    "AS4USER":"SAP_CUSTOMER",
+    "AS4DATE":"0000-00-00",
+    "AS4TIME":"00:00:00",
+    "DTELMASTER":"T",
+    "RESERVEDTE":"",
+    "DTELGLOBAL":"",
+    "SHLPNAME":"",
+    "SHLPFIELD":"",
+    "DEFFDNAME":"",
+    "DATATYPE":"CURR",
+    "LENG":23,
+    "DECIMALS":2,
+    "OUTPUTLEN":30,
+    "LOWERCASE":"",
+    "SIGNFLAG":"",
+    "CONVEXIT":"",
+    "VALEXI":"",
+    "ENTITYTAB":"",
+    "REFKIND":"",
+    "REFTYPE":"",
+    "PROXYTYPE":"",
+    "LTRFLDDIS":"",
+    "BIDICTRLC":"",
+    "NOHISTORY":"",
+    "ABAP_LANGUAGE_VERSION":"5"
+   }
+  ]
+ },
+ {
+  "table":"DD04T",
+  "data":
+  [
+   {
+    "ROLLNAME":"ZINF_E_REVALUATION_AMOUNT",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Revaluation Amount",
+    "REPTEXT":"Revaluation Amount",
+    "SCRTEXT_S":"Rev.Amount",
+    "SCRTEXT_M":"Revaluation Amount",
+    "SCRTEXT_L":"Revaluation Amount"
+   },
+   {
+    "ROLLNAME":"ZINF_E_REVALUATION_AMOUNT",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Yeniden Değerleme Tutarı",
+    "REPTEXT":"Satınalma Tutarı",
+    "SCRTEXT_S":"Sat.Tutarı",
+    "SCRTEXT_M":"Satınalma Tutarı",
+    "SCRTEXT_L":"Satınalma Tutarı"
+   }
+  ]
+ },
+ {
+  "table":"DDTYPES",
+  "data":
+  [
+   {
+    "TYPENAME":"ZINF_E_REVALUATION_AMOUNT",
+    "STATE":"N",
+    "TYPEKIND":"DTEL"
+   }
+  ]
+ },
+ {
+  "table":"TADIR",
+  "data":
+  [
+   {
+    "PGMID":"R3TR",
+    "OBJECT":"DTEL",
+    "OBJ_NAME":"ZINF_E_REVALUATION_AMOUNT",
+    "KORRNUM":"",
+    "SRCSYSTEM":"...",
+    "AUTHOR":"SAP_CUSTOMER",
+    "SRCDEP":"",
+    "DEVCLASS":"ZINFLATION0",
+    "GENFLAG":"",
+    "EDTFLAG":"",
+    "CPROJECT":" L",
+    "MASTERLANG":"T",
+    "VERSID":"",
+    "PAKNOCHECK":"",
+    "OBJSTABLTY":"",
+    "COMPONENT":"",
+    "CRELEASE":"",
+    "DELFLAG":"",
+    "TRANSLTTXT":"",
+    "CREATED_ON":"2024-10-14",
+    "CHECK_DATE":"2024-10-14",
+    "CHECK_CFG":""
+   }
+  ]
+ }
+]

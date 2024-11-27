@@ -1,5 +1,17 @@
 [
  {
+  "table":"BDEF_WBDATA",
+  "data":
+  [
+   {
+    "BDEF":"ZINF_CUSTOM_GELIR_T_ENDEX",
+    "R3STATE":"A",
+    "KIND":"T",
+    "VALUE":"Unmanaged"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

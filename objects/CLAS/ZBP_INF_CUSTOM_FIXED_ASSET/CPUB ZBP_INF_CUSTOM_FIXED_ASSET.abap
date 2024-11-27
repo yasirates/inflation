@@ -1,0 +1,1 @@
+CLASS zbp_inf_custom_fixed_asset DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zinf_custom_fixed_asset.

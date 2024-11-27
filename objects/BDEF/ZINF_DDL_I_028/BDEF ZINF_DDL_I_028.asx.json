@@ -1,5 +1,17 @@
 [
  {
+  "table":"BDEF_WBDATA",
+  "data":
+  [
+   {
+    "BDEF":"ZINF_DDL_I_028",
+    "R3STATE":"A",
+    "KIND":"T",
+    "VALUE":"Managed"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

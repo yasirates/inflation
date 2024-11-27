@@ -1,7 +1,7 @@
   METHOD call_trial_balance.
     CLEAR mt_account_balances.
 
-    zinf_trial_balance_service=>trigger_trial_balance_service(
+    zinf_trial_balance_service=>trigger_trial_balance_service3(
       EXPORTING
         iv_company_code = iv_bukrs
         iv_ledger       = iv_rldnr

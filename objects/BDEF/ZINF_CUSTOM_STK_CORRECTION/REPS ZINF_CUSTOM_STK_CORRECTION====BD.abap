@@ -1,5 +1,5 @@
 unmanaged implementation in class zbp_inf_custom_stk_correction unique;
-strict ( 1 );
+//strict ( 1 );
 
 define behavior for ZINF_CUSTOM_STK_CORRECTION alias stk_corr
 //late numbering

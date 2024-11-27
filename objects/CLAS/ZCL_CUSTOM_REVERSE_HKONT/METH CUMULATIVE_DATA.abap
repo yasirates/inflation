@@ -13,15 +13,11 @@
         DATA(lv_uuid) = cl_system_uuid=>create_uuid_c36_static( ).
       ENDIF.
 
-      lv_hkont = is_deger-hkont.
-
+      lv_hkont                = is_deger-hkont.
       ms_main_data-uuid       = lv_uuid.
       ms_main_data-endex_date = mv_prev_date.
       ms_main_data-budat      = mv_budat.
-*      lv_balance_stock        = wa_log-dmbtr.
-
       ms_main_data-prev_date  = mv_prev_date.
-
 
       CLEAR ms_main_data-factor.
       IF ms_rate_table2 IS NOT INITIAL AND ms_rate_table2-bank_rate IS NOT INITIAL.

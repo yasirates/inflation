@@ -1,5 +1,17 @@
 [
  {
+  "table":"BDEF_WBDATA",
+  "data":
+  [
+   {
+    "BDEF":"ZINF_C_018",
+    "R3STATE":"A",
+    "KIND":"T",
+    "VALUE":"BehaviorProjection"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

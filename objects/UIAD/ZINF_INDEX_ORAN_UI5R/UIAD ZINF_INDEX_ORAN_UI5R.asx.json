@@ -33,7 +33,7 @@
     "REFRESH_INTERVALL":0,
     "DISPLAY_NUMBER_UNIT":"",
     "FLAVOR_ID":"",
-    "CHANGED_AT":"+020240528135358",
+    "CHANGED_AT":"+020241023132321",
     "CHANGED_BY":"SAP_CUSTOMER",
     "MASTERLANG":"",
     "ACH_COMPONENT":"",
@@ -61,7 +61,7 @@
     "TILE_TYPE":"S",
     "CUSTOM_TILE_TYPE":"",
     "DEFAULT_TILE":"X",
-    "TILE_CONFIG_STRING":"",
+    "TILE_CONFIG_STRING":"{\"tileConfiguration\":\"{\\\"display_icon_url\\\":\\\"\\\",\\\"display_info_text\\\":\\\"\\\",\\\"display_title_text\\\":\\\"İndex Oranları\\\",\\\"display_subtitle_text\\\":\\\"\\\",\\\"navigation_use_semantic_object\\\":true,\\\"navigation_target_url\\\":\\\"#ZINF_INDEX_ORAN-display\\\",\\\"navigation_semantic_object\\\":\\\"ZINF_INDEX_ORAN\\\",\\\"navigation_semantic_action\\\":\\\"display\\\",\\\"navigation_semantic_parameters\\\":\\\"\\\",\\\"display_search_keywords\\\":\\\"\\\",\\\"display_number_unit\\\":\\\"\\\",\\\"service_url\\\":\\\"\\\",\\\"service_refresh_interval\\\":0}\"}",
     "TILE_ICON":"",
     "TILE_PARAMETERS":"",
     "SERVICE_BASE_URL":"",
@@ -85,44 +85,6 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":""
-   }
-  ]
- },
- {
-  "table":"SUI_TM_MM_APPPB",
-  "data":
-  [
-   {
-    "APP_ID":"ZINF_INDEX_ORAN_UI5R",
-    "TILE_ID":"UI5R_898A51A5333449971C3B35135DDDD21EE1E278EA_AL",
-    "BAG_ID":"                                                                                                  1",
-    "NAME":"display_title_text",
-    "TRANSLATABLE":"",
-    "VALUE":"İndex Oranları"
-   },
-   {
-    "APP_ID":"ZINF_INDEX_ORAN_UI5R",
-    "TILE_ID":"UI5R_898A51A5333449971C3B35135DDDD21EE1E278EA_AL",
-    "BAG_ID":"                                                                                                  2",
-    "NAME":"display_subtitle_text",
-    "TRANSLATABLE":"",
-    "VALUE":""
-   },
-   {
-    "APP_ID":"ZINF_INDEX_ORAN_UI5R",
-    "TILE_ID":"UI5R_898A51A5333449971C3B35135DDDD21EE1E278EA_AL",
-    "BAG_ID":"                                                                                                  3",
-    "NAME":"display_info_text",
-    "TRANSLATABLE":"",
-    "VALUE":""
-   },
-   {
-    "APP_ID":"ZINF_INDEX_ORAN_UI5R",
-    "TILE_ID":"UI5R_898A51A5333449971C3B35135DDDD21EE1E278EA_AL",
-    "BAG_ID":"                                                                                                  4",
-    "NAME":"display_search_keywords",
-    "TRANSLATABLE":"",
-    "VALUE":""
    }
   ]
  },
@@ -165,8 +127,8 @@
     "CRELEASE":"",
     "DELFLAG":"",
     "TRANSLTTXT":"",
-    "CREATED_ON":"2024-05-28",
-    "CHECK_DATE":"2024-05-28",
+    "CREATED_ON":"2024-10-23",
+    "CHECK_DATE":"2024-10-23",
     "CHECK_CFG":""
    }
   ]

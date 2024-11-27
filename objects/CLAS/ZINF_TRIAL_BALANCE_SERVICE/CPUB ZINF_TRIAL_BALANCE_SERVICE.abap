@@ -57,6 +57,16 @@ CLASS zinf_trial_balance_service DEFINITION
                                                VALUE(iv_endda)        TYPE datum OPTIONAL
                                      RETURNING VALUE(rt_balance)      TYPE zinf_tt_bapi1028_4,
 
+      trigger_trial_balance_service3 IMPORTING VALUE(iv_company_code) TYPE bukrs
+                                               VALUE(iv_ledger)       TYPE char2
+                                               VALUE(iv_gjahr)        TYPE gjahr OPTIONAL
+                                               VALUE(iv_hkont)        TYPE hkont OPTIONAL
+                                               VALUE(it_hkont)        LIKE lt_hkont OPTIONAL
+                                               VALUE(iv_beg_spmon)    TYPE datum OPTIONAL
+                                               VALUE(iv_end_spmon)    TYPE datum OPTIONAL
+                                               VALUE(iv_begda)        TYPE datum OPTIONAL
+                                               VALUE(iv_endda)        TYPE datum OPTIONAL
+                                     RETURNING VALUE(rt_balance)      TYPE zinf_tt_bapi1028_4,
 
       reverse_trial_balance IMPORTING VALUE(iv_company_code) TYPE bukrs
                                       VALUE(iv_ledger)       TYPE char2

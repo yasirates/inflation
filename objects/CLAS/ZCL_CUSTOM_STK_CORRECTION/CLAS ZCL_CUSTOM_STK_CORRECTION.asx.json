@@ -1418,7 +1418,7 @@
     "EVTDECLTYP":0,
     "TYPDUMMY":"",
     "TYPTYPE":1,
-    "TYPE":"ABAP_BOOLEAN",
+    "TYPE":"CHAR6",
     "TABLEOF":"",
     "SRCROW1":0,
     "SRCCOLUMN1":0,

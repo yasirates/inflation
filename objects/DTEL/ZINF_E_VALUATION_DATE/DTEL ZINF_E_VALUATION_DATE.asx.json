@@ -52,6 +52,17 @@
   [
    {
     "ROLLNAME":"ZINF_E_VALUATION_DATE",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Valuation Date",
+    "REPTEXT":"Depreciation Date",
+    "SCRTEXT_S":"Val.Date",
+    "SCRTEXT_M":"Depreciation Date",
+    "SCRTEXT_L":"Depreciation Date"
+   },
+   {
+    "ROLLNAME":"ZINF_E_VALUATION_DATE",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "AS4VERS":0,

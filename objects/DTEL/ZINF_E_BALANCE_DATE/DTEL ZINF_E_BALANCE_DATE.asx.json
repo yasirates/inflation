@@ -52,6 +52,17 @@
   [
    {
     "ROLLNAME":"ZINF_E_BALANCE_DATE",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Balance Date",
+    "REPTEXT":"Balance Date",
+    "SCRTEXT_S":"Bal.Date",
+    "SCRTEXT_M":"Balance Date",
+    "SCRTEXT_L":"Balance Date"
+   },
+   {
+    "ROLLNAME":"ZINF_E_BALANCE_DATE",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "AS4VERS":0,

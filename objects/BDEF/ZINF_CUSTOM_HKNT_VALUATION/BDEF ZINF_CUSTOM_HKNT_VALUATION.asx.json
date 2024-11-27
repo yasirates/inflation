@@ -1,5 +1,17 @@
 [
  {
+  "table":"BDEF_WBDATA",
+  "data":
+  [
+   {
+    "BDEF":"ZINF_CUSTOM_HKNT_VALUATION",
+    "R3STATE":"A",
+    "KIND":"T",
+    "VALUE":"Unmanaged"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

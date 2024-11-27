@@ -1,5 +1,5 @@
 managed implementation in class zbp_inf_ddl_i_028 unique;
-strict ( 2 );
+//strict ( 2 );
 
 define behavior for ZINF_DDL_I_028 //alias <alias_name>
 persistent table zinf_t028
@@ -11,8 +11,11 @@ authorization master ( instance )
   update;
   delete;
 
+  field ( numbering : managed , readonly ) Uuid;
+
   mapping for zinf_t028
     {
+      Uuid      = uuid;
       Hkont     = hkont;
       EndexDate = endex_date;
       Budat     = budat;

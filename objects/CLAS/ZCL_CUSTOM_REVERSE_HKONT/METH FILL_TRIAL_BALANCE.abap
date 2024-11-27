@@ -4,7 +4,7 @@
     DATA(lv_hkont) = shift_left( val = is_deger-hkont sub = '0' ).
 
     "- geçmiş yıllara ait bakiyelerin yıl bazlı toplamları yazılır.
-    IF iv_cancel_old_balance EQ abap_false.
+    IF iv_cancel_old_balance EQ abap_true.
       LOOP AT it_sum_balance INTO DATA(ls_sum_balance) WHERE gl_account EQ lv_hkont. "fisc_year < iv_fyear.
         CLEAR lv_balance_stock.
         ms_main_data-uuid             = cl_system_uuid=>create_uuid_c36_static( ).
@@ -24,7 +24,7 @@
         ELSEIF is_deger-statu EQ 'P'.
           lv_balance_stock = ls_sum_balance-credit_per.
         ENDIF.
-        lv_balance_stock = ls_sum_balance-balance.
+*        lv_balance_stock = ls_sum_balance-balance.
 
         ms_main_data-endex_date =  ms_main_data-prev_date = mv_prev_date.
 
@@ -33,7 +33,6 @@
           ms_main_data-factor =  ms_rate_table2-bank_rate / ms_rate_table1-bank_rate.
 *          ms_main_data-factor = round( val = ms_main_data-factor dec = '1' ).
           CONDENSE ms_main_data-factor NO-GAPS.
-
         ENDIF.
 
         ms_main_data-dmbtr            = lv_balance_stock.
@@ -42,7 +41,10 @@
         IF ms_main_data-endex_balance IS NOT INITIAL.
           ms_main_data-correct_balance = ms_main_data-endex_balance - ms_main_data-dmbtr.
         ENDIF.
-
+        IF ms_main_data-dmbtr IS INITIAL.
+          CLEAR ms_main_data.
+          CONTINUE.
+        ENDIF.
         APPEND ms_main_data TO mt_main_data. CLEAR ms_main_data.
       ENDLOOP.
     ENDIF.
@@ -100,12 +102,8 @@
                                                               budat     = lv_date2.
 
         IF ls_rate2 IS NOT INITIAL AND ls_rate2-bank_rate IS NOT INITIAL.
-          "ms_main_data-factor = ms_rate_table1-bank_rate / ls_rate2-bank_rate.
-*          ms_main_data-factor = ls_rate2-bank_rate / ms_rate_table1-bank_rate.
-
-          " -Değerleme tarihine ait index / Gerçek index tarihine ait index
+          "-Değerleme tarihine ait index / Gerçek index tarihine ait index
           ms_main_data-factor =  ms_rate_table2-bank_rate / ls_rate2-bank_rate.
-*          ms_main_data-factor = round( val = ms_main_data-factor dec = '1' ).
           CONDENSE ms_main_data-factor NO-GAPS.
         ENDIF.
 
@@ -116,6 +114,10 @@
           ms_main_data-correct_balance = ms_main_data-endex_balance - ms_main_data-dmbtr.
         ENDIF.
 
+        IF ms_main_data-dmbtr IS INITIAL.
+          CLEAR ms_main_data.
+          CONTINUE.
+        ENDIF.
         APPEND ms_main_data TO mt_main_data. CLEAR ms_main_data.
       ENDLOOP.
 
@@ -153,7 +155,13 @@
       ms_main_data-correct_hkont_pl = is_deger-correct_hkont_pl.
       ms_main_data-txt50            = VALUE #( mt_skat[ GLAccount = is_deger-hkont ]-GLAccountLongName OPTIONAL ).
 
-      lv_balance_stock = ls_balance-balance.
+      "lv_balance_stock = ls_balance-balance.
+      "aktif/pasif durumuna göre bakiye al.
+      IF is_deger-statu EQ 'A'.
+        lv_balance_stock = ls_balance-debits_per.
+      ELSEIF is_deger-statu EQ 'P'.
+        lv_balance_stock = ls_balance-credit_per.
+      ENDIF.
 
       ms_main_data-prev_date = mv_prev_date.
 
@@ -177,12 +185,8 @@
                                                       budat     = lv_date2.
 
       IF ls_rate2 IS NOT INITIAL AND ls_rate2-bank_rate IS NOT INITIAL.
-        "ms_main_data-factor = ms_rate_table1-bank_rate / ls_rate2-bank_rate.
-*          ms_main_data-factor =  ls_rate2-bank_rate / ms_rate_table1-bank_rate.
-
         " -Değerleme tarihine ait index / Gerçek index tarihine ait index
         ms_main_data-factor =  ms_rate_table2-bank_rate / ls_rate2-bank_rate.
-*        ms_main_data-factor = round( val = ms_main_data-factor dec = '1' ).
         CONDENSE ms_main_data-factor NO-GAPS.
       ENDIF.
 
@@ -192,11 +196,12 @@
       IF ms_main_data-endex_balance IS NOT INITIAL.
         ms_main_data-correct_balance = ms_main_data-endex_balance - ms_main_data-dmbtr.
       ENDIF.
-
+      IF ms_main_data-dmbtr IS INITIAL.
+        CLEAR ms_main_data.
+        CHECK 1 = 2.
+      ENDIF.
       APPEND ms_main_data TO mt_main_data. CLEAR ms_main_data.
-
     ENDIF.
-
 *
     lv_hkont = |{ is_deger-hkont ALPHA = IN }|.
     LOOP AT mt_t026 INTO DATA(ls_026) WHERE hkont EQ lv_hkont.
@@ -236,10 +241,7 @@
                                                       budat     = lv_date2.
 
       IF ls_rate2 IS NOT INITIAL AND ls_rate2-bank_rate IS NOT INITIAL.
-        "ms_main_data-factor = ms_rate_table1-bank_rate / ls_rate2-bank_rate.
-*          ms_main_data-factor =  ls_rate2-bank_rate / ms_rate_table1-bank_rate.
-
-        " -Değerleme tarihine ait index / Gerçek index tarihine ait index
+        "-Değerleme tarihine ait index / Gerçek index tarihine ait index
         ms_main_data-factor =  ms_rate_table2-bank_rate / ls_rate2-bank_rate.
         ms_main_data-factor = round( val = ms_main_data-factor dec = '1' ).
         CONDENSE ms_main_data-factor NO-GAPS.
@@ -252,6 +254,10 @@
         ms_main_data-correct_balance = ms_main_data-endex_balance - ms_main_data-dmbtr.
       ENDIF.
 
+      IF ms_main_data-dmbtr IS INITIAL.
+        CLEAR ms_main_data.
+        CONTINUE.
+      ENDIF.
       APPEND ms_main_data TO mt_main_data. CLEAR ms_main_data.
     ENDLOOP.
   ENDMETHOD.

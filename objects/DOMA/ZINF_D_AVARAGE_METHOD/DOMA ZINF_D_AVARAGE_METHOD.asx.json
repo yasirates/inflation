@@ -62,15 +62,6 @@
     "DOMVALUE_L":"X",
     "DOMVALUE_H":"",
     "APPVAL":""
-   },
-   {
-    "DOMNAME":"ZINF_D_AVARAGE_METHOD",
-    "AS4LOCAL":"N",
-    "VALPOS":2,
-    "AS4VERS":0,
-    "DOMVALUE_L":"",
-    "DOMVALUE_H":"",
-    "APPVAL":""
    }
   ]
  },
@@ -88,17 +79,6 @@
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
     "DOMVALUE_L":"X"
-   },
-   {
-    "DOMNAME":"ZINF_D_AVARAGE_METHOD",
-    "DDLANGUAGE":"T",
-    "AS4LOCAL":"N",
-    "VALPOS":2,
-    "AS4VERS":0,
-    "DDTEXT":"Hayır",
-    "DOMVAL_LD":"",
-    "DOMVAL_HD":"",
-    "DOMVALUE_L":""
    }
   ]
  },

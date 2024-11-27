@@ -33,7 +33,7 @@
     "REFRESH_INTERVALL":0,
     "DISPLAY_NUMBER_UNIT":"",
     "FLAVOR_ID":"",
-    "CHANGED_AT":"+020240502151813",
+    "CHANGED_AT":"+020241126123807",
     "CHANGED_BY":"SAP_CUSTOMER",
     "MASTERLANG":"",
     "ACH_COMPONENT":"",
@@ -61,7 +61,7 @@
     "TILE_TYPE":"S",
     "CUSTOM_TILE_TYPE":"",
     "DEFAULT_TILE":"X",
-    "TILE_CONFIG_STRING":"",
+    "TILE_CONFIG_STRING":"{\"tileConfiguration\":\"{\\\"display_icon_url\\\":\\\"\\\",\\\"display_info_text\\\":\\\"\\\",\\\"display_title_text\\\":\\\"Bakiye Geçiş Tablosu\\\",\\\"display_subtitle_text\\\":\\\"\\\",\\\"navigation_use_semantic_object\\\":true,\\\"navigation_target_url\\\":\\\"#ZBAKIYEGECIS-Display\\\",\\\"navigation_semantic_object\\\":\\\"ZBAKIYEGECIS\\\",\\\"navigation_semantic_action\\\":\\\"Display\\\",\\\"navigation_semantic_parameters\\\":\\\"\\\",\\\"display_search_keywords\\\":\\\"\\\",\\\"display_number_unit\\\":\\\"\\\",\\\"service_url\\\":\\\"\\\",\\\"service_refresh_interval\\\":0}\"}",
     "TILE_ICON":"",
     "TILE_PARAMETERS":"",
     "SERVICE_BASE_URL":"",
@@ -85,44 +85,6 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":""
-   }
-  ]
- },
- {
-  "table":"SUI_TM_MM_APPPB",
-  "data":
-  [
-   {
-    "APP_ID":"ZBAKIYEGECIS_UI5R",
-    "TILE_ID":"UI5R_85A5F42103208ED35FC647E010F0AE9684449436_AL",
-    "BAG_ID":"                                                                                                  1",
-    "NAME":"display_title_text",
-    "TRANSLATABLE":"",
-    "VALUE":"Bakiye Geçiş Tablosu"
-   },
-   {
-    "APP_ID":"ZBAKIYEGECIS_UI5R",
-    "TILE_ID":"UI5R_85A5F42103208ED35FC647E010F0AE9684449436_AL",
-    "BAG_ID":"                                                                                                  2",
-    "NAME":"display_subtitle_text",
-    "TRANSLATABLE":"",
-    "VALUE":""
-   },
-   {
-    "APP_ID":"ZBAKIYEGECIS_UI5R",
-    "TILE_ID":"UI5R_85A5F42103208ED35FC647E010F0AE9684449436_AL",
-    "BAG_ID":"                                                                                                  3",
-    "NAME":"display_info_text",
-    "TRANSLATABLE":"",
-    "VALUE":""
-   },
-   {
-    "APP_ID":"ZBAKIYEGECIS_UI5R",
-    "TILE_ID":"UI5R_85A5F42103208ED35FC647E010F0AE9684449436_AL",
-    "BAG_ID":"                                                                                                  4",
-    "NAME":"display_search_keywords",
-    "TRANSLATABLE":"",
-    "VALUE":""
    }
   ]
  },
@@ -165,8 +127,8 @@
     "CRELEASE":"",
     "DELFLAG":"",
     "TRANSLTTXT":"",
-    "CREATED_ON":"2024-05-02",
-    "CHECK_DATE":"2024-05-02",
+    "CREATED_ON":"2024-11-26",
+    "CHECK_DATE":"2024-11-26",
     "CHECK_CFG":""
    }
   ]

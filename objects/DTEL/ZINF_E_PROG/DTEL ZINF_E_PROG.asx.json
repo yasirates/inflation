@@ -52,6 +52,17 @@
   [
    {
     "ROLLNAME":"ZINF_E_PROG",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Program Selection",
+    "REPTEXT":"",
+    "SCRTEXT_S":"",
+    "SCRTEXT_M":"",
+    "SCRTEXT_L":""
+   },
+   {
+    "ROLLNAME":"ZINF_E_PROG",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "AS4VERS":0,

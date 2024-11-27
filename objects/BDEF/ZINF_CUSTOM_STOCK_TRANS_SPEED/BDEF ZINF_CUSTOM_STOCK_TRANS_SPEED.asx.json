@@ -1,5 +1,17 @@
 [
  {
+  "table":"BDEF_WBDATA",
+  "data":
+  [
+   {
+    "BDEF":"ZINF_CUSTOM_STOCK_TRANS_SPEED",
+    "R3STATE":"A",
+    "KIND":"T",
+    "VALUE":"Unmanaged"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

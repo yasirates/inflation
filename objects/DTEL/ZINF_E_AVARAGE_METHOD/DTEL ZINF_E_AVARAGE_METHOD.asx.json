@@ -52,6 +52,17 @@
   [
    {
     "ROLLNAME":"ZINF_E_AVARAGE_METHOD",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Simple average method",
+    "REPTEXT":"Simple average method",
+    "SCRTEXT_S":"Simp.Avg.",
+    "SCRTEXT_M":"Simple average met",
+    "SCRTEXT_L":"Simple average method"
+   },
+   {
+    "ROLLNAME":"ZINF_E_AVARAGE_METHOD",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "AS4VERS":0,

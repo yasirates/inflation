@@ -7,9 +7,9 @@
     "DDLXNAME":"ZINF_C_028",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2024-07-04",
-    "CHANGED_AT":"11:38:28",
-    "UUID":"5B80129E71491EEF8EBF3DCB3BAD40D2",
+    "CHANGED_ON":"2024-11-19",
+    "CHANGED_AT":"10:06:26",
+    "UUID":"CB92D17136801EEFA9CBBDF4A185A2A1",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"ZINF_C_028",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #PARTNER\r\n\r\n@UI: { headerInfo: { typeName : 'Hesaplar',\r\n                     typeNamePlural : 'Avans Hesapları Ters Bakiye',\r\n                     title :{ type : #STANDARD, label: '', value: 'Hkont' } }\r\n}\r\nannotate entity ZINF_C_028 with\r\n{\r\n  @UI.facet: [{ id       : 'HesapEntry',\r\n                purpose  : #STANDARD,\r\n                type     : #IDENTIFICATION_REFERENCE,\r\n                label    : 'Avans Hesapları Ters Bakiye',\r\n                position : 10 }]\r\n\r\n  @UI: { lineItem: [{ position: 10, label: 'Ana Hesap Numarası' }],identification: [{ position: 10, label:'Ana Hesap Numarası'  }], selectionField: [{ position: 10 }] }\r\n  Hkont;\r\n  @UI: { lineItem: [{ position: 20, label: 'Endeks Tarihi' }],identification: [{ position: 20, label:'Endeks Tarihi'  }], selectionField: [{ position: 20 }] }\r\n  EndexDate;\r\n  @UI: { lineItem: [{ position: 30, label: 'Değerleme Tarihi' }],identification: [{ position: 30, label:'Değerleme Tarihi'  }], selectionField: [{ position: 30 }] }\r\n  Budat;\r\n  @UI: { lineItem: [{ position: 40, label: 'Tutar' }],identification: [{ position: 40, label:'Tutar'  }], selectionField: [{ position: 40 }] }\r\n  @EndUserText.label: 'Tutar'\r\n  Dmbtr;\r\n  @UI: { lineItem: [{ position: 50, label: 'Para Birimi' , exclude: true }],identification: [{ position: 50, label:'Para Birimi'  }], selectionField: [{ position: 50 }] }\r\n  @UI.hidden: true\r\n  Waers;\r\n\r\n}"
+    "SOURCE":"@Metadata.layer: #PARTNER\r\n\r\n@UI: { headerInfo: { typeName : 'Hesaplar',\r\n                     typeNamePlural : 'Avans Hesapları Ters Bakiye',\r\n                     title :{ type : #STANDARD, label: '', value: 'Hkont' } }\r\n}\r\nannotate entity ZINF_C_028 with\r\n{\r\n  @UI.facet: [{ id       : 'HesapEntry',\r\n                purpose  : #STANDARD,\r\n                type     : #IDENTIFICATION_REFERENCE,\r\n                label    : 'Avans Hesapları Ters Bakiye',\r\n                position : 10 }]\r\n                \r\n  @UI: { lineItem: [{ position: 5, label: 'ID' , exclude: true }],identification: [{ position: 5, label:'ID'  }], selectionField: [{ position: 5 }] }\r\n  Uuid;\r\n  @UI: { lineItem: [{ position: 10, label: 'Ana Hesap Numarası' }],identification: [{ position: 10, label:'Ana Hesap Numarası'  }], selectionField: [{ position: 10 }] }\r\n  Hkont;\r\n  @UI: { lineItem: [{ position: 20, label: 'Endeks Tarihi' }],identification: [{ position: 20, label:'Endeks Tarihi'  }], selectionField: [{ position: 20 }] }\r\n  EndexDate;\r\n  @UI: { lineItem: [{ position: 30, label: 'Değerleme Tarihi' }],identification: [{ position: 30, label:'Değerleme Tarihi'  }], selectionField: [{ position: 30 }] }\r\n  Budat;\r\n  @UI: { lineItem: [{ position: 40, label: 'Tutar' }],identification: [{ position: 40, label:'Tutar'  }], selectionField: [{ position: 40 }] }\r\n  @EndUserText.label: 'Tutar'\r\n  Dmbtr;\r\n  @UI: { lineItem: [{ position: 50, label: 'Para Birimi' , exclude: true }],identification: [{ position: 50, label:'Para Birimi'  }], selectionField: [{ position: 50 }] }\r\n  @UI.hidden: true\r\n  Waers;\r\n\r\n}"
    }
   ]
  },
@@ -192,41 +192,6 @@
    {
     "DDLXNAME":"ZINF_C_028",
     "ELEMENT":"HKONT",
-    "NAME":"UI.FACET$1$.ID",
-    "ELEMENT_TYPE":"S",
-    "VALUE":"'HesapEntry'"
-   },
-   {
-    "DDLXNAME":"ZINF_C_028",
-    "ELEMENT":"HKONT",
-    "NAME":"UI.FACET$1$.LABEL",
-    "ELEMENT_TYPE":"S",
-    "VALUE":"'Avans Hesapları Ters Bakiye'"
-   },
-   {
-    "DDLXNAME":"ZINF_C_028",
-    "ELEMENT":"HKONT",
-    "NAME":"UI.FACET$1$.POSITION",
-    "ELEMENT_TYPE":"S",
-    "VALUE":"10"
-   },
-   {
-    "DDLXNAME":"ZINF_C_028",
-    "ELEMENT":"HKONT",
-    "NAME":"UI.FACET$1$.PURPOSE",
-    "ELEMENT_TYPE":"S",
-    "VALUE":"#STANDARD"
-   },
-   {
-    "DDLXNAME":"ZINF_C_028",
-    "ELEMENT":"HKONT",
-    "NAME":"UI.FACET$1$.TYPE",
-    "ELEMENT_TYPE":"S",
-    "VALUE":"#IDENTIFICATION_REFERENCE"
-   },
-   {
-    "DDLXNAME":"ZINF_C_028",
-    "ELEMENT":"HKONT",
     "NAME":"UI.IDENTIFICATION$1$.LABEL",
     "ELEMENT_TYPE":"S",
     "VALUE":"'Ana Hesap Numarası'"
@@ -258,6 +223,83 @@
     "NAME":"UI.SELECTIONFIELD$1$.POSITION",
     "ELEMENT_TYPE":"S",
     "VALUE":"10"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "ELEMENT":"UUID",
+    "NAME":"UI.FACET$1$.ID",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'HesapEntry'"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "ELEMENT":"UUID",
+    "NAME":"UI.FACET$1$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'Avans Hesapları Ters Bakiye'"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "ELEMENT":"UUID",
+    "NAME":"UI.FACET$1$.POSITION",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"10"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "ELEMENT":"UUID",
+    "NAME":"UI.FACET$1$.PURPOSE",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"#STANDARD"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "ELEMENT":"UUID",
+    "NAME":"UI.FACET$1$.TYPE",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"#IDENTIFICATION_REFERENCE"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "ELEMENT":"UUID",
+    "NAME":"UI.IDENTIFICATION$1$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'ID'"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "ELEMENT":"UUID",
+    "NAME":"UI.IDENTIFICATION$1$.POSITION",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"5"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "ELEMENT":"UUID",
+    "NAME":"UI.LINEITEM$1$.EXCLUDE",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"true"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "ELEMENT":"UUID",
+    "NAME":"UI.LINEITEM$1$.LABEL",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"'ID'"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "ELEMENT":"UUID",
+    "NAME":"UI.LINEITEM$1$.POSITION",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"5"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "ELEMENT":"UUID",
+    "NAME":"UI.SELECTIONFIELD$1$.POSITION",
+    "ELEMENT_TYPE":"S",
+    "VALUE":"5"
    },
    {
     "DDLXNAME":"ZINF_C_028",
@@ -388,13 +430,6 @@
     "DDLXNAME":"ZINF_C_028",
     "DDLANGUAGE":"T",
     "ELEMENT":"HKONT",
-    "NAME":"UI.FACET$1$.LABEL",
-    "TEXT":"Avans Hesapları Ters Bakiye"
-   },
-   {
-    "DDLXNAME":"ZINF_C_028",
-    "DDLANGUAGE":"T",
-    "ELEMENT":"HKONT",
     "NAME":"UI.IDENTIFICATION$1$.LABEL",
     "TEXT":"Ana Hesap Numarası"
    },
@@ -404,6 +439,27 @@
     "ELEMENT":"HKONT",
     "NAME":"UI.LINEITEM$1$.LABEL",
     "TEXT":"Ana Hesap Numarası"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"UUID",
+    "NAME":"UI.FACET$1$.LABEL",
+    "TEXT":"Avans Hesapları Ters Bakiye"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"UUID",
+    "NAME":"UI.IDENTIFICATION$1$.LABEL",
+    "TEXT":"ID"
+   },
+   {
+    "DDLXNAME":"ZINF_C_028",
+    "DDLANGUAGE":"T",
+    "ELEMENT":"UUID",
+    "NAME":"UI.LINEITEM$1$.LABEL",
+    "TEXT":"ID"
    },
    {
     "DDLXNAME":"ZINF_C_028",
@@ -430,9 +486,10 @@
     "EXTENDED_ARTIFACT":"ZINF_C_028",
     "VARIANT":"",
     "LAYER":4500,
-    "DT_UUID":"5B80129E71491EEF8EBF3DCB3BAD40D2",
-    "RT_HASH":"C5523F12AD95F392507EF7A402CB28DF931AA76E",
-    "GEN_VERSION":"0"
+    "DT_UUID":"CB92D17136801EEFA9CBBDF4A185A2A1",
+    "RT_HASH":"1D871411EC814A75DE23361D6E4AC76293FE358A",
+    "GEN_VERSION":"0",
+    "TYPE":"0"
    }
   ]
  },

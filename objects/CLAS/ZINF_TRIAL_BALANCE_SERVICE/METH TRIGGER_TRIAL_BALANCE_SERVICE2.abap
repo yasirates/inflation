@@ -1,4 +1,5 @@
   METHOD trigger_trial_balance_service2.
+
     DATA: ls_account_balances_01 TYPE zinf_s_bapi1028_4,
           ls_account_balances_02 TYPE zinf_s_bapi1028_4,
           ls_account_balances_03 TYPE zinf_s_bapi1028_4,

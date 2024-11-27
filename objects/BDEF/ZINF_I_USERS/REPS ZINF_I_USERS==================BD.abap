@@ -11,6 +11,8 @@ authorization master ( instance )
   update;
   delete;
 
+ field( readonly ) ServiceTx;
+
 
   mapping for zinf_users
     {

@@ -10,6 +10,7 @@
     DATA(start) = skip + 1.
     DATA(end)   = top + skip.
 
+    DELETE mt_main_data WHERE correct_balance IS INITIAL.
     LOOP AT mt_main_data ASSIGNING FIELD-SYMBOL(<lfs_main_data>) FROM start TO end.
       APPEND <lfs_main_data> TO lt_main_data.
     ENDLOOP.
@@ -23,6 +24,7 @@
         LOOP AT mt_main_data ASSIGNING <lfs_main_data>.
           <lfs_main_data>-hkont = |{ <lfs_main_data>-hkont ALPHA = IN }|.
         ENDLOOP.
+
         MODIFY zinf_t008 FROM TABLE @mt_main_data.
 
       CATCH cx_root INTO DATA(exception).

@@ -52,6 +52,17 @@
   [
    {
     "ROLLNAME":"ZINF_E_COMPARISON_PERIOD",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Comparison Period",
+    "REPTEXT":"Comparison Period",
+    "SCRTEXT_S":"Comp.Per",
+    "SCRTEXT_M":"Comparison Period",
+    "SCRTEXT_L":"Comparison Period"
+   },
+   {
+    "ROLLNAME":"ZINF_E_COMPARISON_PERIOD",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "AS4VERS":0,

@@ -7,16 +7,18 @@
           rate_type    TYPE zinf_e_rate_type,
           hkont        TYPE RANGE OF hkont.
 
-
     DATA(lv_entity_name) = io_request->get_entity_id( ).
 
     IF io_request->is_data_requested( ).
-*      DATA(requested_fields) = io_request->get_requested_elements( ).
-*      DATA(lv_cond) = io_request->get_filter( )->get_as_sql_string( ).
 
       mo_regulative_common = NEW #( ).
 
-      DATA(filter_conditions) = io_request->get_filter( )->get_as_ranges( ).
+      TRY.
+          DATA(filter_conditions) = io_request->get_filter( )->get_as_ranges( ).
+        CATCH cx_rap_query_filter_no_range.
+          "handle exception
+      ENDTRY.
+
       LOOP AT filter_conditions INTO DATA(condition).
         CASE condition-name.
           WHEN 'BUKRS'.
@@ -52,14 +54,18 @@
         iv_prev_date = prev_date
       ).
 *
-      me->process_data(
-        iv_bukrs     = company_code
-        iv_gjahr     = CONV gjahr( budat(4) )
-        iv_rldnr     = ledger
-        iv_budat     = budat
-        iv_prev_date = prev_date
-        iv_rtype     = rate_type
-      ).
+      TRY.
+          me->process_data(
+            iv_bukrs     = company_code
+            iv_gjahr     = CONV gjahr( budat(4) )
+            iv_rldnr     = ledger
+            iv_budat     = budat
+            iv_prev_date = prev_date
+            iv_rtype     = rate_type
+          ).
+        CATCH cx_uuid_error.
+          "handle exception
+      ENDTRY.
 *
       me->set_data(
         io_request  = io_request

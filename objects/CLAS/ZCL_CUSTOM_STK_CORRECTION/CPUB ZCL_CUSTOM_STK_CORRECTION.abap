@@ -12,7 +12,7 @@ CLASS zcl_custom_stk_correction DEFINITION
            mv_period           TYPE fins_fyearperiod,
            mv_rldnr            TYPE zinf_e_rldnr,
            mv_rtype            TYPE zinf_e_rate_type,
-           mv_avarage_method   TYPE abap_boolean,
+           mv_avarage_method   TYPE char6,
            mv_stock_hkont      TYPE zinf_e_saknr,
            mt_stock            TYPE TABLE OF zinf_t007,
            mr_stock_hkont      TYPE RANGE OF zinf_e_saknr,
@@ -44,4 +44,3 @@ CLASS zcl_custom_stk_correction DEFINITION
                          io_response TYPE REF TO if_rap_query_response OPTIONAL
                RAISING   cx_rap_query_prov_not_impl
                          cx_rap_query_provider.
-

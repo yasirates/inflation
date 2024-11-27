@@ -29,7 +29,8 @@
     "SERVICE_TYPE":0,
     "EXT_4_TECH_NAME":"",
     "EXT_4_VERSION":0,
-    "ABAP_LANGUAGE_VERSION":"5"
+    "ABAP_LANGUAGE_VERSION":"5",
+    "USE_SHM_CACHE":""
    }
   ]
  },

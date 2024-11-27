@@ -9,29 +9,6 @@ CLASS zcl_custom_reverse_hkont DEFINITION
 
     CONSTANTS mc_begda TYPE datum VALUE '20000101'.
 
-
-    TYPES : BEGIN OF mty_sum_balance ,
-              " fisc_year  TYPE gjahr,
-              gl_account TYPE hkont,
-              debits_per TYPE bapicurr_d,
-              credit_per TYPE  bapicurr_d,
-              balance    TYPE bapicurr_d,
-            END OF mty_sum_balance.
-
-    DATA : mt_sum_balance TYPE TABLE OF mty_sum_balance,
-           ms_sum_balance TYPE mty_sum_balance.
-
-
-    DATA: mt_deger            TYPE TABLE OF zinf_t003,
-          ms_deger            LIKE LINE OF mt_deger,
-          mt_skat             TYPE TABLE OF I_GLAccountText,
-          mt_log              TYPE TABLE OF zinf_t008,
-          mt_main_data        TYPE TABLE OF zinf_t008,
-          ms_main_data        LIKE LINE OF mt_main_data,
-          mt_account_balances TYPE zinf_tt_bapi1028_4,
-          mt_t026             TYPE TABLE OF zinf_t026. "Bakiye Geçiş Tablosu
-
-
     DATA mo_regulative_common TYPE REF TO zinf_regulative_common.
 
     TYPES: BEGIN OF mty_dmbtr,
@@ -40,15 +17,32 @@ CLASS zcl_custom_reverse_hkont DEFINITION
              ledgergllineitem            TYPE char6,
              amountincompanycodecurrency TYPE zinf_e_dmbtr,
            END OF mty_dmbtr.
-*
-    DATA: mt_dmbtr                 TYPE TABLE OF mty_dmbtr,
-          mt_rate_table            TYPE TABLE OF zinf_t001,
-          ms_rate_table1           LIKE LINE OF mt_rate_table,
-          ms_rate_table2           LIKE LINE OF mt_rate_table,
-          mt_hkont                 TYPE TABLE OF hkont,
-          ms_hkont                 LIKE LINE OF mt_hkont,
-          mt_trial_balance_account TYPE TABLE OF hkont,
-          mt_range_hkont           TYPE RANGE OF hkont.
+
+    TYPES : BEGIN OF mty_sum_balance ,
+              gl_account TYPE hkont,
+              debits_per TYPE bapicurr_d,
+              credit_per TYPE  bapicurr_d,
+              balance    TYPE bapicurr_d,
+            END OF mty_sum_balance.
+
+    DATA : mt_sum_balance           TYPE TABLE OF mty_sum_balance,
+           ms_sum_balance           TYPE mty_sum_balance,
+           mt_deger                 TYPE TABLE OF zinf_t003,
+           ms_deger                 LIKE LINE OF mt_deger,
+           mt_skat                  TYPE TABLE OF I_GLAccountText,
+           mt_log                   TYPE TABLE OF zinf_t008,
+           mt_main_data             TYPE TABLE OF zinf_t008,
+           ms_main_data             LIKE LINE OF mt_main_data,
+           mt_account_balances      TYPE zinf_tt_bapi1028_4,
+           mt_t026                  TYPE TABLE OF zinf_t026, "Bakiye Geçiş Tablosu
+           mt_dmbtr                 TYPE TABLE OF mty_dmbtr,
+           mt_rate_table            TYPE TABLE OF zinf_t001,
+           ms_rate_table1           LIKE LINE OF mt_rate_table,
+           ms_rate_table2           LIKE LINE OF mt_rate_table,
+           mt_hkont                 TYPE TABLE OF hkont,
+           ms_hkont                 LIKE LINE OF mt_hkont,
+           mt_trial_balance_account TYPE TABLE OF hkont,
+           mt_range_hkont           TYPE RANGE OF hkont.
 
     DATA : mv_budat     TYPE budat,
            mv_prev_date TYPE zinf_e_previous_date.
@@ -70,8 +64,7 @@ CLASS zcl_custom_reverse_hkont DEFINITION
                               VALUE(iv_budat)     TYPE budat
                               VALUE(iv_prev_date) TYPE zinf_e_previous_date
                               VALUE(iv_rtype)     TYPE zinf_e_rate_type
-                    RAISING
-                              cx_uuid_error,
+                    RAISING   cx_uuid_error,
 
       set_data IMPORTING io_request  TYPE REF TO if_rap_query_request OPTIONAL
                          io_response TYPE REF TO if_rap_query_response OPTIONAL

@@ -32,8 +32,8 @@
     LOOP AT mt_deger ASSIGNING <lfs_deger>.
       CLEAR lv_factor.
       DATA(wa_log) = VALUE #( mt_log[ bukrs = <lfs_deger>-bukrs
-                                      hkont = <lfs_deger>-hkont
-                                      rldnr = <lfs_deger>-rldnr ] OPTIONAL ).
+                              hkont = <lfs_deger>-hkont
+                              rldnr = <lfs_deger>-rldnr ] OPTIONAL ).
 
       IF wa_log IS INITIAL.
         "- 1. adımda Bakiye Geçiş tablosuna bakılır yoksa lt_sum_balance tablosundan okunur.
@@ -51,15 +51,16 @@
                                   iv_cancel_old_balance = abap_false
                                   ).
         ELSE.
-          me->fill_trial_balance( it_sum_balance = lt_sum_balance
-                                  it_balance     = lt_balance
-                                  iv_prev_date   = iv_prev_date
-                                  iv_fyear       = iv_gjahr
-                                  iv_rldnr       = iv_rldnr
-                                  iv_bukrs       = iv_bukrs
-                                  iv_budat       = iv_budat
-                                  iv_rtype       = iv_rtype
-                                  is_deger       = <lfs_deger> ).
+          me->fill_trial_balance( it_sum_balance        = lt_sum_balance
+                                  it_balance            = lt_balance
+                                  iv_prev_date          = iv_prev_date
+                                  iv_fyear              = iv_gjahr
+                                  iv_rldnr              = iv_rldnr
+                                  iv_bukrs              = iv_bukrs
+                                  iv_budat              = iv_budat
+                                  iv_rtype              = iv_rtype
+                                  is_deger              = <lfs_deger>
+                                  iv_cancel_old_balance = abap_true ).
         ENDIF.
       ELSE.
 
@@ -83,6 +84,7 @@
                                          AND prev_date = iv_prev_date
                                          AND gjahr     = iv_gjahr.
               ms_main_data = CORRESPONDING #( wa_log ).
+
               APPEND ms_main_data TO mt_main_data. CLEAR ms_main_data.
             ENDLOOP.
 
@@ -102,7 +104,7 @@
                                     iv_budat              = iv_budat
                                     iv_rtype              = iv_rtype
                                     is_deger              = <lfs_deger>
-                                    iv_cancel_old_balance = abap_true ).
+                                    iv_cancel_old_balance = abap_false ).
           ENDIF.
         ELSE.
           LOOP AT mt_log INTO wa_log WHERE bukrs     = <lfs_deger>-bukrs
@@ -111,6 +113,7 @@
                                        AND prev_date = iv_prev_date
                                        AND gjahr     = iv_gjahr.
             ms_main_data = CORRESPONDING #( wa_log ).
+
             APPEND ms_main_data TO mt_main_data. CLEAR ms_main_data.
           ENDLOOP.
         ENDIF.

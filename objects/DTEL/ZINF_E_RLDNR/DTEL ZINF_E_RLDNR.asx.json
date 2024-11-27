@@ -56,6 +56,17 @@
     "AS4LOCAL":"N",
     "AS4VERS":0,
     "DDTEXT":"Ledger",
+    "REPTEXT":"Ledger",
+    "SCRTEXT_S":"Ledger",
+    "SCRTEXT_M":"Ledger",
+    "SCRTEXT_L":"Ledger"
+   },
+   {
+    "ROLLNAME":"ZINF_E_RLDNR",
+    "DDLANGUAGE":"T",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Defter",
     "REPTEXT":"Defter",
     "SCRTEXT_S":"Defter",
     "SCRTEXT_M":"Defter",

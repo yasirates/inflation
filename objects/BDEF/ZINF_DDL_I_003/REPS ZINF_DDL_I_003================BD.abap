@@ -1,5 +1,5 @@
 managed implementation in class zbp_inf_ddl_i_003 unique;
-strict ( 1 );
+//strict ( 1 );
 
 define behavior for ZINF_DDL_I_003 alias t003
 persistent table zinf_t003
@@ -10,6 +10,12 @@ authorization master ( instance )
   create;
   update;
   delete;
+
+
+//  validation validateFields on  save { create; update; field Rldnr;}
+//  determination check_value on save { field Rldnr; }
+//  determination modify_value on modify { field Rldnr; }
+
 
   mapping for zinf_t003
     {

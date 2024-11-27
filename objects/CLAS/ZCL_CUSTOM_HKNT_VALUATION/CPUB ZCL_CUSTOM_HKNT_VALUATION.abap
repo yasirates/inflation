@@ -13,6 +13,9 @@ CLASS zcl_custom_hknt_valuation DEFINITION
     CONSTANTS mc_begda TYPE datum VALUE '20000101'.
 
 
+    TYPES tt_requested_elements TYPE STANDARD TABLE OF string WITH EMPTY KEY.
+    DATA mt_requested_elements TYPE tt_requested_elements.
+
     TYPES : BEGIN OF mty_sum_balance ,
               " fisc_year  TYPE gjahr,
               gl_account TYPE hkont,

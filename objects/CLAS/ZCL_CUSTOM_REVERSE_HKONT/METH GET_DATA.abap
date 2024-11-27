@@ -52,10 +52,8 @@
       SORT mt_log BY bukrs hkont rldnr.
     ENDIF.
 
-
     SELECT * FROM zinf_t026
       WHERE bukrs      EQ @iv_bukrs
         AND endex_date EQ @iv_idate
      INTO TABLE @mt_t026.
-
   ENDMETHOD.

@@ -68,13 +68,11 @@
         rt_balance      = mt_stock_balance
     ).
 
-    DATA lv_rspmon_stock_total TYPE  bapicurr_d.
-    DATA lv_cspmon_stock_total TYPE  bapicurr_d.
+    DATA: lv_rspmon_stock_total TYPE  bapicurr_d,
+          lv_cspmon_stock_total TYPE  bapicurr_d.
 
     DATA(lv_xrspmon) = iv_rspmon(4) && iv_rspmon+5(2).
     DATA(lv_crspmon) = iv_cspmon(4) && iv_cspmon+5(2).
-
-
 
     LOOP AT mt_stock_balance INTO DATA(ls_stock_balance).
       DATA(lv_stock_spmon) = ls_stock_balance-fisc_year(4) && ls_stock_balance-fis_period.
@@ -111,7 +109,8 @@
         iv_ledger       = iv_rldnr
         it_hkont        = mt_hkont
         iv_beg_spmon    = CONV #( lv_beg_spmon )
-        iv_end_spmon    = CONV #( iv_rspmon )
+        "iv_end_spmon    = CONV #( iv_rspmon )
+        iv_end_spmon    = CONV #( iv_cspmon )
       RECEIVING
         rt_balance      = mt_account_balance
     ).

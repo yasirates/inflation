@@ -6,10 +6,10 @@
    {
     "APP_ID":"ZINFLATION_UI5R",
     "CAT_ID":"SAP_TC_UI5_REPO_UIAD",
-    "SEM_OBJ":"anahesapdegerleme3",
+    "SEM_OBJ":"ZINFLATION",
     "SEM_ACT":"display",
-    "TARGET_MAPPING_ID":"UI5R_73DC31C63674A32B4402584C52D4A88BAE1B16BF_TM",
-    "TILE_ID":"UI5R_73DC31C63674A32B4402584C52D4A88BAE1B16BF_AL",
+    "TARGET_MAPPING_ID":"UI5R_00226E64A330CAE005FB7B23AC7D22F4201F9C0A_TM",
+    "TILE_ID":"UI5R_00226E64A330CAE005FB7B23AC7D22F4201F9C0A_AL",
     "APP_TYPE":"U",
     "TCODE":"",
     "WD_APPL_ID":"",
@@ -33,7 +33,7 @@
     "REFRESH_INTERVALL":0,
     "DISPLAY_NUMBER_UNIT":"",
     "FLAVOR_ID":"",
-    "CHANGED_AT":"+020240709140727",
+    "CHANGED_AT":"+020241122121034",
     "CHANGED_BY":"SAP_CUSTOMER",
     "MASTERLANG":"",
     "ACH_COMPONENT":"",
@@ -57,11 +57,11 @@
   [
    {
     "APP_ID":"ZINFLATION_UI5R",
-    "TILE_ID":"UI5R_73DC31C63674A32B4402584C52D4A88BAE1B16BF_AL",
+    "TILE_ID":"UI5R_00226E64A330CAE005FB7B23AC7D22F4201F9C0A_AL",
     "TILE_TYPE":"S",
     "CUSTOM_TILE_TYPE":"",
     "DEFAULT_TILE":"X",
-    "TILE_CONFIG_STRING":"",
+    "TILE_CONFIG_STRING":"{\"tileConfiguration\":\"{\\\"display_icon_url\\\":\\\"\\\",\\\"display_info_text\\\":\\\"\\\",\\\"display_title_text\\\":\\\"Ana Hesap Değerleme\\\",\\\"display_subtitle_text\\\":\\\"\\\",\\\"navigation_use_semantic_object\\\":true,\\\"navigation_target_url\\\":\\\"#ZINFLATION-display\\\",\\\"navigation_semantic_object\\\":\\\"ZINFLATION\\\",\\\"navigation_semantic_action\\\":\\\"display\\\",\\\"navigation_semantic_parameters\\\":\\\"\\\",\\\"display_search_keywords\\\":\\\"\\\",\\\"display_number_unit\\\":\\\"\\\",\\\"service_url\\\":\\\"\\\",\\\"service_refresh_interval\\\":0}\"}",
     "TILE_ICON":"",
     "TILE_PARAMETERS":"",
     "SERVICE_BASE_URL":"",
@@ -80,49 +80,11 @@
    {
     "LANGU":"E",
     "APP_ID":"ZINFLATION_UI5R",
-    "TILE_ID":"UI5R_73DC31C63674A32B4402584C52D4A88BAE1B16BF_AL",
-    "TILE_TITLE":"Ana Hesap Değerleme Programı",
+    "TILE_ID":"UI5R_00226E64A330CAE005FB7B23AC7D22F4201F9C0A_AL",
+    "TILE_TITLE":"Ana Hesap Değerleme",
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":""
-   }
-  ]
- },
- {
-  "table":"SUI_TM_MM_APPPB",
-  "data":
-  [
-   {
-    "APP_ID":"ZINFLATION_UI5R",
-    "TILE_ID":"UI5R_73DC31C63674A32B4402584C52D4A88BAE1B16BF_AL",
-    "BAG_ID":"                                                                                                  1",
-    "NAME":"display_title_text",
-    "TRANSLATABLE":"",
-    "VALUE":"Ana Hesap Değerleme Programı"
-   },
-   {
-    "APP_ID":"ZINFLATION_UI5R",
-    "TILE_ID":"UI5R_73DC31C63674A32B4402584C52D4A88BAE1B16BF_AL",
-    "BAG_ID":"                                                                                                  2",
-    "NAME":"display_subtitle_text",
-    "TRANSLATABLE":"",
-    "VALUE":""
-   },
-   {
-    "APP_ID":"ZINFLATION_UI5R",
-    "TILE_ID":"UI5R_73DC31C63674A32B4402584C52D4A88BAE1B16BF_AL",
-    "BAG_ID":"                                                                                                  3",
-    "NAME":"display_info_text",
-    "TRANSLATABLE":"",
-    "VALUE":""
-   },
-   {
-    "APP_ID":"ZINFLATION_UI5R",
-    "TILE_ID":"UI5R_73DC31C63674A32B4402584C52D4A88BAE1B16BF_AL",
-    "BAG_ID":"                                                                                                  4",
-    "NAME":"display_search_keywords",
-    "TRANSLATABLE":"",
-    "VALUE":""
    }
   ]
  },
@@ -133,11 +95,11 @@
    {
     "APP_ID":"ZINFLATION_UI5R",
     "LANGU":"E",
-    "TILE_TITLE":"Ana Hesap Değerleme Programı",
+    "TILE_TITLE":"Ana Hesap Değerleme",
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"Ana Hesap Değerleme Programı"
+    "ALT_SMART_LINK_TITLE":"Ana Hesap Değerleme"
    }
   ]
  },
@@ -165,8 +127,8 @@
     "CRELEASE":"",
     "DELFLAG":"",
     "TRANSLTTXT":"",
-    "CREATED_ON":"2024-07-09",
-    "CHECK_DATE":"2024-07-09",
+    "CREATED_ON":"2024-11-22",
+    "CHECK_DATE":"2024-11-22",
     "CHECK_CFG":""
    }
   ]

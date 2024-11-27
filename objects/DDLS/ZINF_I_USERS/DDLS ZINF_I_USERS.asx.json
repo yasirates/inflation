@@ -9,10 +9,10 @@
     "AS4USER":"SAP_CUSTOMER",
     "AS4DATE":"0000-00-00",
     "AS4TIME":"00:00:00",
-    "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Web Servis Kullanıcı Bilgileri'\r\n@Metadata.ignorePropagatedAnnotations: true\r\ndefine root view entity ZINF_I_USERS\r\n  as select from zinf_users\r\n{\r\n\r\n  key service_id  as ServiceId,\r\n      service_url as ServiceUrl,\r\n      username    as Username,\r\n      password    as Password\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZINF_USERS\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
+    "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Web Servis Kullanıcı Bilgileri'\r\n@Metadata.ignorePropagatedAnnotations: true\r\ndefine root view entity ZINF_I_USERS\r\n  as select from zinf_users  as us inner join DDCDS_CUSTOMER_DOMAIN_VALUE_T(p_domain_name: 'ZINF_D_SERVICE_ID') as dm\r\n                                   on  dm.value_low = us.service_id\r\n{\r\n\r\n  key us.service_id  as ServiceId,\r\n      dm.text        as ServiceTx,\r\n      us.service_url as ServiceUrl,\r\n      us.username    as Username,\r\n      us.password    as Password\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"DDCDS_CUSTOMER_DOMAIN_VALUE_T\",\n\"ZINF_USERS\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"",
+    "CHGFLAG":"54",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

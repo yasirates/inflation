@@ -22,8 +22,6 @@
     READ TABLE mt_rate_table INTO ms_rate_table1 WITH KEY rate_type = iv_rtype
                                                           budat     = mv_prev_date.
 
-*    mv_budat = mo_regulative_common->month_plus_determine( months = '-1' olddate = mv_budat ).
-
     READ TABLE mt_rate_table INTO ms_rate_table2 WITH KEY rate_type = iv_rtype
                                                           budat     = mv_budat.
   ENDMETHOD.

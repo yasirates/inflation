@@ -3,6 +3,8 @@
     DELETE FROM zinf_t008 WHERE belnr IS INITIAL
                             AND gjahr IS INITIAL.
 
+    COMMIT WORK AND WAIT.
+
     SELECT *
        FROM zinf_t001
       INTO TABLE @mt_rate_table.

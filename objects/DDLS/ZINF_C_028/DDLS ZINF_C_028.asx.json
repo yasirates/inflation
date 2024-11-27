@@ -9,10 +9,10 @@
     "AS4USER":"SAP_CUSTOMER",
     "AS4DATE":"0000-00-00",
     "AS4TIME":"00:00:00",
-    "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Avans Hesapları Ters Bakiye'\r\n@Metadata.allowExtensions: true\r\ndefine root view entity ZINF_C_028\r\n  as projection on ZINF_DDL_I_028 as t028\r\n{\r\n      @EndUserText.label: 'Ana hesap numarası'\r\n      @Consumption.valueHelpDefinition:[ {\r\n                 entity :{ name    : 'I_GLAccountStdVH',\r\n                           element : 'GLAccount' } }]\r\n  key Hkont,\r\n  key EndexDate,\r\n   @EndUserText.label: 'Değerleme Tarihi'\r\n  key Budat,\r\n      @Semantics.amount.currencyCode: 'Waers'\r\n      @EndUserText.label: 'Tutar'\r\n      Dmbtr,\r\n       @EndUserText.label: 'Para Birimi'\r\n      Waers\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZINF_DDL_I_028\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
+    "SOURCE":"@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Avans Hesapları Ters Bakiye'\r\n@Metadata.allowExtensions: true\r\ndefine root view entity ZINF_C_028\r\n  as projection on ZINF_DDL_I_028 as t028\r\n{\r\n  key Uuid,\r\n      @EndUserText.label: 'Ana hesap numarası'\r\n      @Consumption.valueHelpDefinition:[ {\r\n                 entity :{ name    : 'I_GLAccountStdVH',\r\n                           element : 'GLAccount' } }]\r\n  key Hkont,\r\n  key EndexDate,\r\n   @EndUserText.label: 'Değerleme Tarihi'\r\n  key Budat,\r\n      @Semantics.amount.currencyCode: 'Waers'\r\n      @EndUserText.label: 'Tutar'\r\n      Dmbtr,\r\n       @EndUserText.label: 'Para Birimi'\r\n      Waers\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZINF_DDL_I_028\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"",
+    "CHGFLAG":"T54",
     "SOURCE_TYPE":"P",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"
