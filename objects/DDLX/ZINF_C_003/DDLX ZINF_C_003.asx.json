@@ -7,9 +7,9 @@
     "DDLXNAME":"ZINF_C_003",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2024-11-27",
-    "CHANGED_AT":"11:09:11",
-    "UUID":"CB92D17136801EEFAB9600EE665CE2B5",
+    "CHANGED_ON":"2024-11-29",
+    "CHANGED_AT":"13:37:46",
+    "UUID":"CB92D17136801EEFABCAE3B5CF6B22BD",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"ZINF_C_003",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #PARTNER\r\n\r\n@UI: { headerInfo: { typeName : 'Hesaplar',\r\n                     typeNamePlural : 'Değerlenecek Hesaplar Bakım Ekranı',\r\n                     title :{ type : #STANDARD, label: 'Değerlenecek Hesaplar', value: 'Bukrs' } }\r\n}\r\n//@Search.searchable: true\r\nannotate view ZINF_C_003 with\r\n{\r\n  @UI.facet: [{ id : 'HesapEntry',\r\n                  purpose : #STANDARD,\r\n                  type: #IDENTIFICATION_REFERENCE,\r\n                  label : 'Değerlenecek Hesaplar Giriş Ekranı',\r\n                  position : 10 }]\r\n\r\n  @UI: { lineItem: [{ position: 10, label: 'Şirket Kodu' }],identification: [{ position: 10, label:'Şirket Kodu'  }], selectionField: [{ position: 20 }] }\r\n  Bukrs;\r\n\r\n  @UI : { lineItem: [{ position: 20 }],identification: [{ position: 20 }],selectionField: [{ position: 20 }] }\r\n  Hkont;\r\n\r\n  @UI : { lineItem: [{ position: 30 }],identification: [{ position: 30 }],selectionField: [{ position: 30 }]  }\r\n\r\n  @Consumption     : {\r\n       valueHelpDefinition:[{ entity :{ name :'I_Ledger', element: 'Ledger' } } ],\r\n       filter           : {selectionType: #SINGLE, multipleSelections: false,  mandatory: true } }\r\n  Rldnr;\r\n\r\n  @UI : { lineItem: [{ position: 40 }],identification: [{ position: 40 }],selectionField: [{ position: 40 }] }\r\n  Blart;\r\n\r\n  @UI : { lineItem: [{ position: 50 }],identification: [{ position: 50 }],selectionField: [{ position: 50 }] , hidden: true }\r\n  AccPrinciple;\r\n\r\n  @UI : { lineItem: [{ position: 60 }],identification: [{ position: 60 }],selectionField: [{ position: 60 }] }\r\n  @Consumption.valueHelpDefinition: [{ entity: { name : 'ZINF_DDL_I_STATUS', element: 'Value' } }]\r\n  Statu;\r\n\r\n  @UI : { lineItem: [{ position: 70 }],identification: [{ position: 70 }],selectionField: [{ position: 70 }] , hidden: true }\r\n  @Consumption.valueHelpDefinition: [{ entity: { name : 'ZINF_DDL_I_SOURCE', element: 'Value' } }]\r\n  Source;\r\n\r\n  @UI : { lineItem: [{ position: 80 }],identification: [{ position: 80 }],selectionField: [{ position: 80 }] }\r\n  CorrectHkontBs;\r\n\r\n  @UI : { lineItem: [{ position: 90 }],identification: [{ position: 90 }],selectionField: [{ position: 90 }] }\r\n  CorrectHkontPl;\r\n\r\n}"
+    "SOURCE":"@Metadata.layer: #PARTNER\r\n\r\n@UI: { headerInfo: { typeName : 'Hesaplar',\r\n                     typeNamePlural : 'Değerlenecek Hesaplar Bakım Ekranı',\r\n                     title :{ type : #STANDARD, label: 'Değerlenecek Hesaplar', value: 'Bukrs' } }\r\n}\r\n//@Search.searchable: true\r\nannotate view ZINF_C_003 with\r\n{\r\n  @UI.facet: [{ id : 'HesapEntry',\r\n                  purpose : #STANDARD,\r\n                  type: #IDENTIFICATION_REFERENCE,\r\n                  label : 'Değerlenecek Hesaplar Giriş Ekranı',\r\n                  position : 10 }]\r\n\r\n  @UI: { lineItem: [{ position: 10, label: 'Şirket Kodu' }],identification: [{ position: 10, label:'Şirket Kodu'  }], selectionField: [{ position: 20 }] }\r\n  Bukrs;\r\n\r\n  @UI : { lineItem: [{ position: 20 }],identification: [{ position: 20 }],selectionField: [{ position: 20 }] }\r\n  Hkont;\r\n\r\n  @UI : { lineItem: [{ position: 30 }],identification: [{ position: 30 }],selectionField: [{ position: 30 }]  }\r\n\r\n  @Consumption     : {\r\n       valueHelpDefinition:[{ entity :{ name :'I_Ledger', element: 'Ledger' } } ],\r\n       filter           : {selectionType: #SINGLE, multipleSelections: false,  mandatory: false } }\r\n  Rldnr;\r\n\r\n  @UI : { lineItem: [{ position: 40 }],identification: [{ position: 40 }],selectionField: [{ position: 40 }] }\r\n  Blart;\r\n\r\n  @UI : { lineItem: [{ position: 50 }],identification: [{ position: 50 }],selectionField: [{ position: 50 }] , hidden: true }\r\n  AccPrinciple;\r\n\r\n  @UI : { lineItem: [{ position: 60 }],identification: [{ position: 60 }],selectionField: [{ position: 60 }] }\r\n  @Consumption.valueHelpDefinition: [{ entity: { name : 'ZINF_DDL_I_STATUS', element: 'Value' } }]\r\n  Statu;\r\n\r\n  @UI : { lineItem: [{ position: 70 }],identification: [{ position: 70 }],selectionField: [{ position: 70 }] , hidden: true }\r\n  @Consumption.valueHelpDefinition: [{ entity: { name : 'ZINF_DDL_I_SOURCE', element: 'Value' } }]\r\n  Source;\r\n\r\n  @UI : { lineItem: [{ position: 80 }],identification: [{ position: 80 }],selectionField: [{ position: 80 }] }\r\n  CorrectHkontBs;\r\n\r\n  @UI : { lineItem: [{ position: 90 }],identification: [{ position: 90 }],selectionField: [{ position: 90 }] }\r\n  CorrectHkontPl;\r\n\r\n}"
    }
   ]
  },
@@ -264,7 +264,7 @@
     "ELEMENT":"RLDNR",
     "NAME":"CONSUMPTION.FILTER.MANDATORY",
     "ELEMENT_TYPE":"S",
-    "VALUE":"true"
+    "VALUE":"false"
    },
    {
     "DDLXNAME":"ZINF_C_003",
@@ -451,8 +451,8 @@
     "EXTENDED_ARTIFACT":"ZINF_C_003",
     "VARIANT":"",
     "LAYER":4500,
-    "DT_UUID":"CB92D17136801EEFAB9600EE665CE2B5",
-    "RT_HASH":"26BD240432DB0182FC1B3DB3721AA8455FC55E90",
+    "DT_UUID":"CB92D17136801EEFABCAE3B5CF6B22BD",
+    "RT_HASH":"6D3C13F843406FDC467DAA5972892A848590896E",
     "GEN_VERSION":"0",
     "TYPE":"0"
    }

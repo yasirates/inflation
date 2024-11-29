@@ -71,6 +71,17 @@
   [
    {
     "DOMNAME":"ZINF_D_AVARAGE_METHOD",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":1,
+    "AS4VERS":0,
+    "DDTEXT":"Yes",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"X"
+   },
+   {
+    "DOMNAME":"ZINF_D_AVARAGE_METHOD",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "VALPOS":1,
