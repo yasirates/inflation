@@ -30,6 +30,18 @@
   ]
  },
  {
+  "table":"UCONHTTPSERVHAND",
+  "data":
+  [
+   {
+    "ID":"ZINF_FIXED_ASSET_CREATE",
+    "VERSION":"A",
+    "SERVICEORDER":1,
+    "SERVICEHANDLER":"ZCL_INF_FIXED_ASSET_CREATE"
+   }
+  ]
+ },
+ {
   "table":"UCONHTTPSERVHEAD",
   "data":
   [
@@ -40,8 +52,8 @@
     "CREATEDON":"2024-11-04",
     "CREATEDAT":"11:13:11",
     "CHANGEDBY":"SAP_CUSTOMER",
-    "CHANGEDON":"2024-11-04",
-    "CHANGEDAT":"11:13:11",
+    "CHANGEDON":"2024-12-10",
+    "CHANGEDAT":"12:26:41",
     "CREATED_BY_OBJ_PGMID":"",
     "CREATED_BY_OBJ_TYPE":"",
     "CREATED_BY_OBJ_NAME":"",
@@ -53,6 +65,18 @@
     "ICFPARGUID":"",
     "ABAP_LANGUAGE_VERSION":"5",
     "XPRA_UPDATE":""
+   }
+  ]
+ },
+ {
+  "table":"UCONHTTPSERVTEXT",
+  "data":
+  [
+   {
+    "ID":"ZINF_FIXED_ASSET_CREATE",
+    "VERSION":"A",
+    "LANG":"T",
+    "SHORTTEXT":"Duran Varlık Create"
    }
   ]
  }
