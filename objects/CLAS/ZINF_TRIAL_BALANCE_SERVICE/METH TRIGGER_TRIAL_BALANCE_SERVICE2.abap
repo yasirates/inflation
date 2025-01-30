@@ -122,7 +122,7 @@
 
         DATA(lv_response) = lo_web_http_response->get_text( ).
 
-        zcl_etr_regulative_common=>parse_xml(
+        zinf_regulative_common=>parse_xml(
           EXPORTING
             iv_xml_string = lv_response
           RECEIVING

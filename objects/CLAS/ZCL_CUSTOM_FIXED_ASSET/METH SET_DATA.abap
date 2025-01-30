@@ -13,7 +13,6 @@
 *    ENDLOOP.
 *
     TRY.
-
         IF io_request->is_total_numb_of_rec_requested( ).
           total_number_of_records = lines( mt_out_data ).
           io_response->set_total_number_of_records( total_number_of_records ).
@@ -23,4 +22,5 @@
       CATCH cx_root INTO DATA(exception).
         DATA(exception_message) = cl_message_helper=>get_latest_t100_exception( exception )->if_message~get_longtext( ).
     ENDTRY.
+
   ENDMETHOD.
