@@ -16,10 +16,14 @@
 
       "-Katsayı
       TRY.
-          ms_out_data-factor = ls_index_rate_data-bank_rate / ls_valuation_rate_data-bank_rate.
+          IF ls_index_rate_data-bank_rate > 0 AND ls_valuation_rate_data-bank_rate > 0.
+            ms_out_data-factor = ls_index_rate_data-bank_rate / ls_valuation_rate_data-bank_rate.
+          ENDIF.
         CATCH cx_root INTO DATA(lox_root).
           CLEAR ms_out_data-factor.
+          CONTINUE.
       ENDTRY.
+
 
       "- Endekslenmiş Tutar(Satınalma).
       ms_out_data-index_amt_purc = ms_out_data-reval_amount * ms_out_data-factor.
