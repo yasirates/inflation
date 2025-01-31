@@ -34,13 +34,16 @@
 
     ENDLOOP.
 
-    me->get_data( ).
+    TRY.
+        me->get_data( ).
 
-    me->prepare_data(  ).
+        me->prepare_data(  ).
 
-    me->set_data(
-      io_request  = io_request
-      io_response = io_response
-    ).
+        me->set_data(
+          io_request  = io_request
+          io_response = io_response
+        ).
+      CATCH cx_root INTO DATA(cx_root).
+    ENDTRY.
 
   ENDMETHOD.

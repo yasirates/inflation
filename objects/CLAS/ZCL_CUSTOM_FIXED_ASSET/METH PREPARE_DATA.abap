@@ -15,7 +15,11 @@
       ms_out_data-index_date = ls_029-endex_date.
 
       "-Katsayı
-      ms_out_data-factor = ls_index_rate_data-bank_rate / ls_valuation_rate_data-bank_rate.
+      TRY.
+          ms_out_data-factor = ls_index_rate_data-bank_rate / ls_valuation_rate_data-bank_rate.
+        CATCH cx_root INTO DATA(lox_root).
+          CLEAR ms_out_data-factor.
+      ENDTRY.
 
       "- Endekslenmiş Tutar(Satınalma).
       ms_out_data-index_amt_purc = ms_out_data-reval_amount * ms_out_data-factor.
