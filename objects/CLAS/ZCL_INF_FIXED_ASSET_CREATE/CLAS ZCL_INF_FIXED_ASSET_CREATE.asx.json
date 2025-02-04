@@ -234,7 +234,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":217,
-    "TYPESRC":"BEGIN OF cookie,\r\n        name    TYPE string,\r\n        value   TYPE string,\r\n        domain  TYPE string,\r\n        path    TYPE string,\r\n        secure  TYPE int4,\r\n        expires TYPE string,\r\n      END OF cookie\r\n"
+    "TYPESRC":"BEGIN OF cookie,\r\n        name    TYPE string,\r\n        value   TYPE string,\r\n        domain  TYPE string,\r\n        path    TYPE string,\r\n        secure  TYPE int4,\r\n        expires TYPE string,\r\n      END OF cookie\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_FIXED_ASSET_CREATE",
@@ -292,7 +293,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":80,
-    "TYPESRC":"cookies          TYPE STANDARD TABLE OF cookie WITH NON-UNIQUE KEY !name !path\r\n"
+    "TYPESRC":"cookies          TYPE STANDARD TABLE OF cookie WITH NON-UNIQUE KEY !name !path\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_FIXED_ASSET_CREATE",
@@ -350,7 +352,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_FIXED_ASSET_CREATE",
@@ -408,7 +411,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_FIXED_ASSET_CREATE",
@@ -466,7 +470,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_FIXED_ASSET_CREATE",
@@ -524,7 +529,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_FIXED_ASSET_CREATE",
@@ -582,7 +588,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":215,
-    "TYPESRC":"BEGIN OF mty_service_response_json,\r\n              code            TYPE string,\r\n              numericSeverity TYPE char10,\r\n              longtextUrl     TYPE string,\r\n            END OF mty_service_response_json\r\n"
+    "TYPESRC":"BEGIN OF mty_service_response_json,\r\n              code            TYPE string,\r\n              numericSeverity TYPE char10,\r\n              longtextUrl     TYPE string,\r\n            END OF mty_service_response_json\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_FIXED_ASSET_CREATE",
@@ -640,7 +647,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":96,
-    "TYPESRC":"BEGIN OF mty_success_response,\r\n        belnr TYPE belnr_d,\r\n      END OF mty_success_response\r\n"
+    "TYPESRC":"BEGIN OF mty_success_response,\r\n        belnr TYPE belnr_d,\r\n      END OF mty_success_response\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_FIXED_ASSET_CREATE",
@@ -698,7 +706,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_FIXED_ASSET_CREATE",
@@ -756,7 +765,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":67,
-    "TYPESRC":"mt_service_res_json_data TYPE TABLE OF  mty_service_response_json\r\n"
+    "TYPESRC":"mt_service_res_json_data TYPE TABLE OF  mty_service_response_json\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_FIXED_ASSET_CREATE",
@@ -814,7 +824,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":42,
-    "TYPESRC":"mt_users        TYPE TABLE OF zinf_users\r\n"
+    "TYPESRC":"mt_users        TYPE TABLE OF zinf_users\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_FIXED_ASSET_CREATE",
@@ -872,7 +883,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_FIXED_ASSET_CREATE",
@@ -930,7 +942,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

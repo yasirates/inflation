@@ -367,7 +367,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -425,7 +426,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -483,7 +485,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -541,7 +544,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -599,7 +603,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -657,7 +662,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -715,7 +721,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -773,7 +780,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -831,7 +839,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":48,
-    "TYPESRC":"ms_deger                 LIKE LINE OF mt_deger\r\n"
+    "TYPESRC":"ms_deger                 LIKE LINE OF mt_deger\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -889,7 +898,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":48,
-    "TYPESRC":"ms_hkont                 LIKE LINE OF mt_hkont\r\n"
+    "TYPESRC":"ms_hkont                 LIKE LINE OF mt_hkont\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -947,7 +957,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":52,
-    "TYPESRC":"ms_main_data             LIKE LINE OF mt_main_data\r\n"
+    "TYPESRC":"ms_main_data             LIKE LINE OF mt_main_data\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1005,7 +1016,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":53,
-    "TYPESRC":"ms_rate_table1           LIKE LINE OF mt_rate_table\r\n"
+    "TYPESRC":"ms_rate_table1           LIKE LINE OF mt_rate_table\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1063,7 +1075,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":53,
-    "TYPESRC":"ms_rate_table2           LIKE LINE OF mt_rate_table\r\n"
+    "TYPESRC":"ms_rate_table2           LIKE LINE OF mt_rate_table\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1121,7 +1134,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1179,7 +1193,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":275,
-    "TYPESRC":"BEGIN OF mty_dmbtr,\r\n             postingdate                 TYPE budat,\r\n             glaccount                   TYPE belnr_d,\r\n             ledgergllineitem            TYPE char6,\r\n             amountincompanycodecurrency TYPE zinf_e_dmbtr,\r\n           END OF mty_dmbtr\r\n"
+    "TYPESRC":"BEGIN OF mty_dmbtr,\r\n             postingdate                 TYPE budat,\r\n             glaccount                   TYPE belnr_d,\r\n             ledgergllineitem            TYPE char6,\r\n             amountincompanycodecurrency TYPE zinf_e_dmbtr,\r\n           END OF mty_dmbtr\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1237,7 +1252,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":232,
-    "TYPESRC":"BEGIN OF mty_sum_balance ,\r\n              gl_account TYPE hkont,\r\n              debits_per TYPE bapicurr_d,\r\n              credit_per TYPE  bapicurr_d,\r\n              balance    TYPE bapicurr_d,\r\n            END OF mty_sum_balance\r\n"
+    "TYPESRC":"BEGIN OF mty_sum_balance ,\r\n              gl_account TYPE hkont,\r\n              debits_per TYPE bapicurr_d,\r\n              credit_per TYPE  bapicurr_d,\r\n              balance    TYPE bapicurr_d,\r\n            END OF mty_sum_balance\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1295,7 +1311,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1353,7 +1370,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":50,
-    "TYPESRC":"mt_deger                 TYPE TABLE OF zinf_t003\r\n"
+    "TYPESRC":"mt_deger                 TYPE TABLE OF zinf_t003\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1411,7 +1429,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":50,
-    "TYPESRC":"mt_dmbtr                 TYPE TABLE OF mty_dmbtr\r\n"
+    "TYPESRC":"mt_dmbtr                 TYPE TABLE OF mty_dmbtr\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1469,7 +1488,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":46,
-    "TYPESRC":"mt_hkont                 TYPE TABLE OF hkont\r\n"
+    "TYPESRC":"mt_hkont                 TYPE TABLE OF hkont\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1527,7 +1547,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":50,
-    "TYPESRC":"mt_log                   TYPE TABLE OF zinf_t008\r\n"
+    "TYPESRC":"mt_log                   TYPE TABLE OF zinf_t008\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1585,7 +1606,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":50,
-    "TYPESRC":"mt_main_data             TYPE TABLE OF zinf_t008\r\n"
+    "TYPESRC":"mt_main_data             TYPE TABLE OF zinf_t008\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1643,7 +1665,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":46,
-    "TYPESRC":"mt_range_hkont           TYPE RANGE OF hkont\r\n"
+    "TYPESRC":"mt_range_hkont           TYPE RANGE OF hkont\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1701,7 +1724,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":50,
-    "TYPESRC":"mt_rate_table            TYPE TABLE OF zinf_t001\r\n"
+    "TYPESRC":"mt_rate_table            TYPE TABLE OF zinf_t001\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1759,7 +1783,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":56,
-    "TYPESRC":"mt_skat                  TYPE TABLE OF I_GLAccountText\r\n"
+    "TYPESRC":"mt_skat                  TYPE TABLE OF I_GLAccountText\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1817,7 +1842,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":56,
-    "TYPESRC":"mt_sum_balance           TYPE TABLE OF mty_sum_balance\r\n"
+    "TYPESRC":"mt_sum_balance           TYPE TABLE OF mty_sum_balance\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1875,7 +1901,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":50,
-    "TYPESRC":"mt_t026                  TYPE TABLE OF zinf_t026\r\n"
+    "TYPESRC":"mt_t026                  TYPE TABLE OF zinf_t026\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1933,7 +1960,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":46,
-    "TYPESRC":"mt_trial_balance_account TYPE TABLE OF hkont\r\n"
+    "TYPESRC":"mt_trial_balance_account TYPE TABLE OF hkont\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -1991,7 +2019,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -2049,7 +2078,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -2107,7 +2137,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_REVERSE_HKONT",
@@ -2165,7 +2196,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

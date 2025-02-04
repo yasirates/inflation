@@ -248,7 +248,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -306,7 +307,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -364,7 +366,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -422,7 +425,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":44,
-    "TYPESRC":"ms_hkont             LIKE LINE OF mt_hkont\r\n"
+    "TYPESRC":"ms_hkont             LIKE LINE OF mt_hkont\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -480,7 +484,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":46,
-    "TYPESRC":"mt_005               TYPE TABLE OF zinf_t005\r\n"
+    "TYPESRC":"mt_005               TYPE TABLE OF zinf_t005\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -538,7 +543,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -596,7 +602,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":46,
-    "TYPESRC":"mt_business_data     TYPE TABLE OF zinf_t013\r\n"
+    "TYPESRC":"mt_business_data     TYPE TABLE OF zinf_t013\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -654,7 +661,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":46,
-    "TYPESRC":"mt_cost              TYPE TABLE OF zinf_t009\r\n"
+    "TYPESRC":"mt_cost              TYPE TABLE OF zinf_t009\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -712,7 +720,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":66,
-    "TYPESRC":"mt_display_data      TYPE TABLE OF zinf_custom_stock_trans_speed\r\n"
+    "TYPESRC":"mt_display_data      TYPE TABLE OF zinf_custom_stock_trans_speed\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -770,7 +779,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":42,
-    "TYPESRC":"mt_hkont             TYPE TABLE OF hkont\r\n"
+    "TYPESRC":"mt_hkont             TYPE TABLE OF hkont\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -828,7 +838,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":46,
-    "TYPESRC":"mt_stock             TYPE TABLE OF zinf_t007\r\n"
+    "TYPESRC":"mt_stock             TYPE TABLE OF zinf_t007\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -886,7 +897,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -944,7 +956,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -1002,7 +1015,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STOCK_TRANS_SPEED",
@@ -1060,7 +1074,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

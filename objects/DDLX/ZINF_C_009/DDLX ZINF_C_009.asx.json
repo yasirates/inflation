@@ -312,6 +312,22 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZINF_C_009",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.VALUE",
+    "PATH":"BUKRS",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZINF_C_009",
+    "REF_OBJECT_ELEMENT":"BUKRS"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

@@ -424,6 +424,32 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZINF_C_USERS",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.VALUE",
+    "PATH":"USERNAME",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZINF_C_USERS",
+    "REF_OBJECT_ELEMENT":"USERNAME"
+   },
+   {
+    "DDLXNAME":"ZINF_C_USERS",
+    "ELEMENT":"SERVICEID",
+    "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
+    "PATH":"ZINF_VH_RATES",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DO",
+    "REF_OBJECT_NAME":"ZINF_VH_RATES",
+    "REF_OBJECT_ELEMENT":""
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

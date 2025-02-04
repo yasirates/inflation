@@ -248,7 +248,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -306,7 +307,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -364,7 +366,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -422,7 +425,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -480,7 +484,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -538,7 +543,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -596,7 +602,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -654,7 +661,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":711,
-    "TYPESRC":"BEGIN OF mty_bapi1028_4,\r\n              comp_code       TYPE bukrs,\r\n              gl_account      TYPE hkont,\r\n              fisc_year       TYPE gjahr,\r\n              fis_period      TYPE monat,\r\n              debits_per      TYPE bapicurr_d,\r\n              credit_per      TYPE bapicurr_d,\r\n              per_sales       TYPE bapicurr_d,\r\n              balance         TYPE bapicurr_d,\r\n              currency        TYPE waers,\r\n              currency_iso    TYPE char3,\r\n              debits_per_long TYPE bapicurext31,\r\n              credit_per_long TYPE bapicurext31,\r\n              per_sales_long  TYPE bapicurext31,\r\n              balance_long    TYPE bapicurext31,\r\n            END OF mty_bapi1028_4\r\n"
+    "TYPESRC":"BEGIN OF mty_bapi1028_4,\r\n              comp_code       TYPE bukrs,\r\n              gl_account      TYPE hkont,\r\n              fisc_year       TYPE gjahr,\r\n              fis_period      TYPE monat,\r\n              debits_per      TYPE bapicurr_d,\r\n              credit_per      TYPE bapicurr_d,\r\n              per_sales       TYPE bapicurr_d,\r\n              balance         TYPE bapicurr_d,\r\n              currency        TYPE waers,\r\n              currency_iso    TYPE char3,\r\n              debits_per_long TYPE bapicurext31,\r\n              credit_per_long TYPE bapicurext31,\r\n              per_sales_long  TYPE bapicurext31,\r\n              balance_long    TYPE bapicurext31,\r\n            END OF mty_bapi1028_4\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -712,7 +720,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":32,
-    "TYPESRC":"mty_hash      TYPE c LENGTH 32\r\n"
+    "TYPESRC":"mty_hash      TYPE c LENGTH 32\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -770,7 +779,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":284,
-    "TYPESRC":"BEGIN OF mty_xml_node,\r\n             node_type  TYPE string,\r\n             prefix     TYPE string,\r\n             name       TYPE string,\r\n             nsuri      TYPE string,\r\n             value_type TYPE string,\r\n             value      TYPE string,\r\n           END OF mty_xml_node\r\n"
+    "TYPESRC":"BEGIN OF mty_xml_node,\r\n             node_type  TYPE string,\r\n             prefix     TYPE string,\r\n             name       TYPE string,\r\n             nsuri      TYPE string,\r\n             value_type TYPE string,\r\n             value      TYPE string,\r\n           END OF mty_xml_node\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -828,7 +838,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":57,
-    "TYPESRC":"mty_xml_nodes TYPE TABLE OF mty_xml_node WITH EMPTY KEY\r\n"
+    "TYPESRC":"mty_xml_nodes TYPE TABLE OF mty_xml_node WITH EMPTY KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -886,7 +897,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":50,
-    "TYPESRC":"mt_account_balances TYPE TABLE OF mty_bapi1028_4\r\n"
+    "TYPESRC":"mt_account_balances TYPE TABLE OF mty_bapi1028_4\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -944,7 +956,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -1002,7 +1015,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_REGULATIVE_COMMON",
@@ -1060,7 +1074,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

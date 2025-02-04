@@ -283,7 +283,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -341,7 +342,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -399,7 +401,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -457,7 +460,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -515,7 +519,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -573,7 +578,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -631,7 +637,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -689,7 +696,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -747,7 +755,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -805,7 +814,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -863,7 +873,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -921,7 +932,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":43,
-    "TYPESRC":"mt_029            TYPE TABLE OF zinf_t029\r\n"
+    "TYPESRC":"mt_029            TYPE TABLE OF zinf_t029\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -979,7 +991,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":43,
-    "TYPESRC":"mt_030            TYPE TABLE OF zinf_t030\r\n"
+    "TYPESRC":"mt_030            TYPE TABLE OF zinf_t030\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -1037,7 +1050,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":43,
-    "TYPESRC":"mt_index_table    TYPE TABLE OF zinf_t001\r\n"
+    "TYPESRC":"mt_index_table    TYPE TABLE OF zinf_t001\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -1095,7 +1109,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":57,
-    "TYPESRC":"mt_out_data       TYPE TABLE OF zinf_custom_fixed_asset\r\n"
+    "TYPESRC":"mt_out_data       TYPE TABLE OF zinf_custom_fixed_asset\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -1153,7 +1168,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -1211,7 +1227,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -1269,7 +1286,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -1327,7 +1345,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":71,
-    "TYPESRC":"tt_range_option TYPE STANDARD TABLE OF ty_range_option WITH EMPTY KEY\r\n"
+    "TYPESRC":"tt_range_option TYPE STANDARD TABLE OF ty_range_option WITH EMPTY KEY\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_FIXED_ASSET",
@@ -1385,7 +1404,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":206,
-    "TYPESRC":"BEGIN OF ty_range_option,\r\n             sign   TYPE c LENGTH 1,\r\n             option TYPE c LENGTH 2,\r\n             low    TYPE string,\r\n             high   TYPE string,\r\n           END OF ty_range_option\r\n"
+    "TYPESRC":"BEGIN OF ty_range_option,\r\n             sign   TYPE c LENGTH 1,\r\n             option TYPE c LENGTH 2,\r\n             low    TYPE string,\r\n             high   TYPE string,\r\n           END OF ty_range_option\r\n",
+    "MTDSQLSERVICE":""
    }
   ]
  },

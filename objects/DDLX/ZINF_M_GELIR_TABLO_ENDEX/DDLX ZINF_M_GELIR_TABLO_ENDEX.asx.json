@@ -515,6 +515,22 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZINF_M_GELIR_TABLO_ENDEX",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.VALUE",
+    "PATH":"BUKRS",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZINF_C_GELIR_TABLO_ENDEX",
+    "REF_OBJECT_ELEMENT":"BUKRS"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

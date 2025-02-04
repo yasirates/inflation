@@ -263,6 +263,22 @@
   ]
  },
  {
+  "table":"DDLX_RT_REFS",
+  "data":
+  [
+   {
+    "DDLXNAME":"ZINF_C_010",
+    "ELEMENT":"",
+    "NAME":"UI.HEADERINFO.TITLE.VALUE",
+    "PATH":"RATETYPE",
+    "REF_OBJECT_TYPE":"STOB",
+    "REF_OBJECT_SUBTYPE":"DOF",
+    "REF_OBJECT_NAME":"ZINF_C_010",
+    "REF_OBJECT_ELEMENT":"RATETYPE"
+   }
+  ]
+ },
+ {
   "table":"TADIR",
   "data":
   [

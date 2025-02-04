@@ -71,33 +71,6 @@
     "DOMVALUE_L":"02",
     "DOMVALUE_H":"",
     "APPVAL":""
-   },
-   {
-    "DOMNAME":"ZINF_D_SERVICE_ID",
-    "AS4LOCAL":"N",
-    "VALPOS":3,
-    "AS4VERS":0,
-    "DOMVALUE_L":"03",
-    "DOMVALUE_H":"",
-    "APPVAL":""
-   },
-   {
-    "DOMNAME":"ZINF_D_SERVICE_ID",
-    "AS4LOCAL":"N",
-    "VALPOS":4,
-    "AS4VERS":0,
-    "DOMVALUE_L":"04",
-    "DOMVALUE_H":"",
-    "APPVAL":""
-   },
-   {
-    "DOMNAME":"ZINF_D_SERVICE_ID",
-    "AS4LOCAL":"N",
-    "VALPOS":5,
-    "AS4VERS":0,
-    "DOMVALUE_L":"05",
-    "DOMVALUE_H":"",
-    "APPVAL":""
    }
   ]
  },
@@ -111,7 +84,7 @@
     "AS4LOCAL":"N",
     "VALPOS":1,
     "AS4VERS":0,
-    "DDTEXT":"Trial Balance",
+    "DDTEXT":"UFE",
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
     "DOMVALUE_L":"01"
@@ -122,43 +95,10 @@
     "AS4LOCAL":"N",
     "VALPOS":2,
     "AS4VERS":0,
-    "DDTEXT":"Journal Entry - Create",
+    "DDTEXT":"TUFE",
     "DOMVAL_LD":"",
     "DOMVAL_HD":"",
     "DOMVALUE_L":"02"
-   },
-   {
-    "DOMNAME":"ZINF_D_SERVICE_ID",
-    "DDLANGUAGE":"T",
-    "AS4LOCAL":"N",
-    "VALPOS":3,
-    "AS4VERS":0,
-    "DDTEXT":"Journal Entry - Reverse",
-    "DOMVAL_LD":"",
-    "DOMVAL_HD":"",
-    "DOMVALUE_L":"03"
-   },
-   {
-    "DOMNAME":"ZINF_D_SERVICE_ID",
-    "DDLANGUAGE":"T",
-    "AS4LOCAL":"N",
-    "VALPOS":4,
-    "AS4VERS":0,
-    "DDTEXT":"Fixed Asset - Create",
-    "DOMVAL_LD":"",
-    "DOMVAL_HD":"",
-    "DOMVALUE_L":"04"
-   },
-   {
-    "DOMNAME":"ZINF_D_SERVICE_ID",
-    "DDLANGUAGE":"T",
-    "AS4LOCAL":"N",
-    "VALPOS":5,
-    "AS4VERS":0,
-    "DDTEXT":"Get CSRF Token",
-    "DOMVAL_LD":"",
-    "DOMVAL_HD":"",
-    "DOMVALUE_L":"05"
    }
   ]
  },

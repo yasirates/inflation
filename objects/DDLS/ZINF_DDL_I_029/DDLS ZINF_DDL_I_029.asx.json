@@ -12,7 +12,7 @@
     "SOURCE":"@AbapCatalog.viewEnhancementCategory: [#NONE]\r\n@AccessControl.authorizationCheck: #NOT_REQUIRED\r\n@EndUserText.label: 'Duran Varlıklar'\r\n@Metadata.ignorePropagatedAnnotations: true\r\n@ObjectModel.usageType:{\r\n    serviceQuality: #X,\r\n    sizeCategory: #S,\r\n    dataClass: #MIXED\r\n}\r\ndefine root view entity zinf_ddl_i_029\r\n  as select from zinf_t029\r\n{\r\n  key uuid              as Uuid,\r\n  key bukrs             as Bukrs,\r\n  key anln1             as Anln1,\r\n  key anln2             as Anln2,\r\n  key rldnr             as Rldnr,\r\n  key val_date          as ValuationDate, \r\n      depreciation_area as DepreciationArea,\r\n      bldat             as Bldat,\r\n      budat             as Budat,\r\n      rfdat             as Rfdat,\r\n      bktxt             as Bktxt,\r\n      shkzg             as Shkzg,\r\n      purchase_year     as PurchaseYear,\r\n      @Semantics.amount.currencyCode: 'Waers'\r\n      reval_amount      as RevalAmount,\r\n      @Semantics.amount.currencyCode: 'Waers'\r\n      depre_amount      as DepreAmount,\r\n      waers             as Waers,\r\n      zuonr             as Zuonr,\r\n      sgtxt             as Sgtxt,         \r\n      endex_date        as EndexDate\r\n}\r\n/*+[internal] {\n\"BASEINFO\":\n{\n\"FROM\":\n[\n\"ZINF_T029\"\n],\n\"ASSOCIATED\":\n[],\n\"BASE\":\n[],\n\"ANNO_REF\":\n[],\n\"SCALAR_FUNCTION\":\n[],\n\"VERSION\":0,\n\"ANNOREF_EVALUATION_ERROR\":\"\"\n}\n}*/",
     "PARENTNAME":"",
     "ACTFLAG":"",
-    "CHGFLAG":"",
+    "CHGFLAG":"J,WT42",
     "SOURCE_TYPE":"W",
     "SOURCE_ORIGIN":"0",
     "ABAP_LANGUAGE_VERSION":"5"

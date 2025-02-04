@@ -332,7 +332,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -390,7 +391,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -448,7 +450,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -506,7 +509,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -564,7 +568,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":48,
-    "TYPESRC":"mr_stock_hkont      TYPE RANGE OF zinf_e_saknr\r\n"
+    "TYPESRC":"mr_stock_hkont      TYPE RANGE OF zinf_e_saknr\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -622,7 +627,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -680,7 +686,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -738,7 +745,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -796,7 +804,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":43,
-    "TYPESRC":"ms_hkont            LIKE LINE OF mt_hkont\r\n"
+    "TYPESRC":"ms_hkont            LIKE LINE OF mt_hkont\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -854,7 +863,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -912,7 +922,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -970,7 +981,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":65,
-    "TYPESRC":"mt_acc_val          TYPE TABLE OF ddcds_customer_domain_value_t\r\n"
+    "TYPESRC":"mt_acc_val          TYPE TABLE OF ddcds_customer_domain_value_t\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1028,7 +1040,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":45,
-    "TYPESRC":"mt_corr_log         TYPE TABLE OF zinf_t002\r\n"
+    "TYPESRC":"mt_corr_log         TYPE TABLE OF zinf_t002\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1086,7 +1099,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":41,
-    "TYPESRC":"mt_hkont            TYPE TABLE OF hkont\r\n"
+    "TYPESRC":"mt_hkont            TYPE TABLE OF hkont\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1144,7 +1158,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":45,
-    "TYPESRC":"mt_log              TYPE TABLE OF zinf_t002\r\n"
+    "TYPESRC":"mt_log              TYPE TABLE OF zinf_t002\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1202,7 +1217,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":51,
-    "TYPESRC":"mt_skat             TYPE TABLE OF I_GLAccountText\r\n"
+    "TYPESRC":"mt_skat             TYPE TABLE OF I_GLAccountText\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1260,7 +1276,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":45,
-    "TYPESRC":"mt_stock            TYPE TABLE OF zinf_t007\r\n"
+    "TYPESRC":"mt_stock            TYPE TABLE OF zinf_t007\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1318,7 +1335,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":45,
-    "TYPESRC":"mt_stspe            TYPE TABLE OF zinf_t013\r\n"
+    "TYPESRC":"mt_stspe            TYPE TABLE OF zinf_t013\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1376,7 +1394,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":45,
-    "TYPESRC":"mt_t001             TYPE TABLE OF zinf_t001\r\n"
+    "TYPESRC":"mt_t001             TYPE TABLE OF zinf_t001\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1434,7 +1453,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1492,7 +1512,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1550,7 +1571,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1608,7 +1630,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1666,7 +1689,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1724,7 +1748,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1782,7 +1807,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_CUSTOM_STK_CORRECTION",
@@ -1840,7 +1866,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

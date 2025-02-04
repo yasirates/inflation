@@ -234,7 +234,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZBP_INF_DDL_I_008",
@@ -292,7 +293,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZBP_INF_DDL_I_008",
@@ -350,7 +352,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZBP_INF_DDL_I_008",
@@ -408,7 +411,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":47,
-    "TYPESRC":"ms_main_data        LIKE LINE OF mt_main_data\r\n"
+    "TYPESRC":"ms_main_data        LIKE LINE OF mt_main_data\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZBP_INF_DDL_I_008",
@@ -466,7 +470,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":275,
-    "TYPESRC":"BEGIN OF mty_dmbtr,\r\n             postingdate                 TYPE budat,\r\n             glaccount                   TYPE belnr_d,\r\n             ledgergllineitem            TYPE char6,\r\n             amountincompanycodecurrency TYPE zinf_e_dmbtr,\r\n           END OF mty_dmbtr\r\n"
+    "TYPESRC":"BEGIN OF mty_dmbtr,\r\n             postingdate                 TYPE budat,\r\n             glaccount                   TYPE belnr_d,\r\n             ledgergllineitem            TYPE char6,\r\n             amountincompanycodecurrency TYPE zinf_e_dmbtr,\r\n           END OF mty_dmbtr\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZBP_INF_DDL_I_008",
@@ -524,7 +529,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZBP_INF_DDL_I_008",
@@ -582,7 +588,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":45,
-    "TYPESRC":"mt_deger            TYPE TABLE OF zinf_t003\r\n"
+    "TYPESRC":"mt_deger            TYPE TABLE OF zinf_t003\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZBP_INF_DDL_I_008",
@@ -640,7 +647,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":34,
-    "TYPESRC":"mt_dmbtr TYPE TABLE OF mty_dmbtr\r\n"
+    "TYPESRC":"mt_dmbtr TYPE TABLE OF mty_dmbtr\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZBP_INF_DDL_I_008",
@@ -698,7 +706,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":45,
-    "TYPESRC":"mt_hval_l           TYPE TABLE OF zinf_t008\r\n"
+    "TYPESRC":"mt_hval_l           TYPE TABLE OF zinf_t008\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZBP_INF_DDL_I_008",
@@ -756,7 +765,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":45,
-    "TYPESRC":"mt_main_data        TYPE TABLE OF zinf_t008\r\n"
+    "TYPESRC":"mt_main_data        TYPE TABLE OF zinf_t008\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZBP_INF_DDL_I_008",
@@ -814,7 +824,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":51,
-    "TYPESRC":"mt_skat             TYPE TABLE OF I_GLAccountText\r\n"
+    "TYPESRC":"mt_skat             TYPE TABLE OF I_GLAccountText\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZBP_INF_DDL_I_008",
@@ -872,7 +883,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZBP_INF_DDL_I_008",
@@ -930,7 +942,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

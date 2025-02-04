@@ -289,6 +289,13 @@
     "TYPE":"C",
     "LENGTH":20,
     "DECIMALS":-1
+   },
+   {
+    "NAME":"IAM_APP_ID",
+    "KEY":"",
+    "TYPE":"C",
+    "LENGTH":35,
+    "DECIMALS":-1
    }
   ],
   "properties":

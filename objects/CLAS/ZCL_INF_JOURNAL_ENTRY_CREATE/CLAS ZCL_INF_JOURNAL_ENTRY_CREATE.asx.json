@@ -213,7 +213,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_JOURNAL_ENTRY_CREATE",
@@ -271,7 +272,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_JOURNAL_ENTRY_CREATE",
@@ -329,7 +331,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_JOURNAL_ENTRY_CREATE",
@@ -387,7 +390,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":376,
-    "TYPESRC":"BEGIN OF mty_xml,\r\n              uuid               TYPE string,\r\n              AccountingDocument TYPE string,\r\n              CompanyCode        TYPE string,\r\n              FiscalYear         TYPE string,\r\n              TypeID             TYPE string,\r\n              SeverityCode       TYPE string,\r\n              Note               TYPE string,\r\n            END OF mty_xml\r\n"
+    "TYPESRC":"BEGIN OF mty_xml,\r\n              uuid               TYPE string,\r\n              AccountingDocument TYPE string,\r\n              CompanyCode        TYPE string,\r\n              FiscalYear         TYPE string,\r\n              TypeID             TYPE string,\r\n              SeverityCode       TYPE string,\r\n              Note               TYPE string,\r\n            END OF mty_xml\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_JOURNAL_ENTRY_CREATE",
@@ -445,7 +449,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":39,
-    "TYPESRC":"mt_reverse_xml  TYPE TABLE OF mty_xml\r\n"
+    "TYPESRC":"mt_reverse_xml  TYPE TABLE OF mty_xml\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_JOURNAL_ENTRY_CREATE",
@@ -503,7 +508,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":42,
-    "TYPESRC":"mt_users        TYPE TABLE OF zinf_users\r\n"
+    "TYPESRC":"mt_users        TYPE TABLE OF zinf_users\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_JOURNAL_ENTRY_CREATE",
@@ -561,7 +567,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":39,
-    "TYPESRC":"mt_xml          TYPE TABLE OF mty_xml\r\n"
+    "TYPESRC":"mt_xml          TYPE TABLE OF mty_xml\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_JOURNAL_ENTRY_CREATE",
@@ -619,7 +626,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_JOURNAL_ENTRY_CREATE",
@@ -677,7 +685,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZCL_INF_JOURNAL_ENTRY_CREATE",
@@ -735,7 +744,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

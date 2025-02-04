@@ -227,7 +227,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_TRIAL_BALANCE_SERVICE",
@@ -285,7 +286,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":215,
-    "TYPESRC":"BEGIN OF lty_reverse_hkont ,\r\n              bukrs TYPE bukrs,\r\n              hkont TYPE hkont,\r\n              rldnr TYPE zinf_e_rldnr,\r\n              statu TYPE zinf_e_statu,\r\n            END  OF lty_reverse_hkont\r\n"
+    "TYPESRC":"BEGIN OF lty_reverse_hkont ,\r\n              bukrs TYPE bukrs,\r\n              hkont TYPE hkont,\r\n              rldnr TYPE zinf_e_rldnr,\r\n              statu TYPE zinf_e_statu,\r\n            END  OF lty_reverse_hkont\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_TRIAL_BALANCE_SERVICE",
@@ -343,7 +345,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":30,
-    "TYPESRC":"lt_hkont TYPE TABLE OF hkont\r\n"
+    "TYPESRC":"lt_hkont TYPE TABLE OF hkont\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_TRIAL_BALANCE_SERVICE",
@@ -401,7 +404,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":754,
-    "TYPESRC":"BEGIN OF mty_service_data,\r\n              CompanyCode                    TYPE bukrs,\r\n              GLAccount                      TYPE hkont,\r\n              DebitCreditCode                TYPE shkzg,\r\n              FiscalYearPeriod               TYPE fins_fyearperiod,\r\n              StartingBalanceAmtInCoCodeCrcy TYPE zinf_t005-dmbtr,\r\n              DebitAmountInCoCodeCrcy        TYPE zinf_t005-dmbtr,\r\n              DebitAmountInCoCodeCrcy_E      TYPE waers,\r\n              CreditAmountInCoCodeCrcy       TYPE zinf_t005-dmbtr,\r\n              CreditAmountInCoCodeCrcy_E     TYPE waers,\r\n              EndingBalanceAmtInCoCodeCrcy   TYPE zinf_t005-dmbtr,\r\n              EndingBalanceAmtInCoCodeCrcy_E TYPE waers,\r\n            END OF mty_service_data\r\n"
+    "TYPESRC":"BEGIN OF mty_service_data,\r\n              CompanyCode                    TYPE bukrs,\r\n              GLAccount                      TYPE hkont,\r\n              DebitCreditCode                TYPE shkzg,\r\n              FiscalYearPeriod               TYPE fins_fyearperiod,\r\n              StartingBalanceAmtInCoCodeCrcy TYPE zinf_t005-dmbtr,\r\n              DebitAmountInCoCodeCrcy        TYPE zinf_t005-dmbtr,\r\n              DebitAmountInCoCodeCrcy_E      TYPE waers,\r\n              CreditAmountInCoCodeCrcy       TYPE zinf_t005-dmbtr,\r\n              CreditAmountInCoCodeCrcy_E     TYPE waers,\r\n              EndingBalanceAmtInCoCodeCrcy   TYPE zinf_t005-dmbtr,\r\n              EndingBalanceAmtInCoCodeCrcy_E TYPE waers,\r\n            END OF mty_service_data\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_TRIAL_BALANCE_SERVICE",
@@ -459,7 +463,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":35,
-    "TYPESRC":"mt_deger TYPE TABLE OF  zinf_t003\r\n"
+    "TYPESRC":"mt_deger TYPE TABLE OF  zinf_t003\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_TRIAL_BALANCE_SERVICE",
@@ -517,7 +522,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":50,
-    "TYPESRC":"mt_reverse_hkont TYPE TABLE OF lty_reverse_hkont\r\n"
+    "TYPESRC":"mt_reverse_hkont TYPE TABLE OF lty_reverse_hkont\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_TRIAL_BALANCE_SERVICE",
@@ -575,7 +581,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":48,
-    "TYPESRC":"mt_service_data TYPE TABLE OF mty_service_data\r\n"
+    "TYPESRC":"mt_service_data TYPE TABLE OF mty_service_data\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_TRIAL_BALANCE_SERVICE",
@@ -633,7 +640,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":42,
-    "TYPESRC":"mt_users        TYPE TABLE OF zinf_users\r\n"
+    "TYPESRC":"mt_users        TYPE TABLE OF zinf_users\r\n",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_TRIAL_BALANCE_SERVICE",
@@ -691,7 +699,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_TRIAL_BALANCE_SERVICE",
@@ -749,7 +758,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_TRIAL_BALANCE_SERVICE",
@@ -807,7 +817,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    },
    {
     "CLSNAME":"ZINF_TRIAL_BALANCE_SERVICE",
@@ -865,7 +876,8 @@
     "BCMTDSYN":0,
     "BCEVTCAT":0,
     "TYPESRC_LENG":0,
-    "TYPESRC":""
+    "TYPESRC":"",
+    "MTDSQLSERVICE":""
    }
   ]
  },

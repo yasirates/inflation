@@ -117,6 +117,17 @@
     "PRIM_TABLE":"",
     "VIEWGRANT":"",
     "TAB_FILLED":""
+   },
+   {
+    "OBJECTNAME":"DDLX",
+    "OBJECTTYPE":"L",
+    "TABNAME":"DDLX_RT_REFS",
+    "COVER":"",
+    "CANDIDATE":"",
+    "DDIC":"X",
+    "PRIM_TABLE":"",
+    "VIEWGRANT":"",
+    "TAB_FILLED":""
    }
   ]
  },
@@ -194,6 +205,18 @@
     "TOBJKEY":"/&/L/*",
     "MASKNLEN":14,
     "MASKKLEN":3,
+    "PRIM_TABLE":""
+   },
+   {
+    "OBJECTNAME":"DDLX",
+    "OBJECTTYPE":"L",
+    "TRWCOUNT":7,
+    "TPGMID":"R3TR",
+    "TOBJECT":"TABU",
+    "TOBJ_NAME":"DDLX_RT_REFS",
+    "TOBJKEY":"/&/*",
+    "MASKNLEN":12,
+    "MASKKLEN":2,
     "PRIM_TABLE":""
    }
   ]
