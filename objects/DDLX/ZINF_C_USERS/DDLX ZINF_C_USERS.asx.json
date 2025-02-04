@@ -7,9 +7,9 @@
     "DDLXNAME":"ZINF_C_USERS",
     "VERSION":"A",
     "CHANGED_BY":"SAP_CUSTOMER",
-    "CHANGED_ON":"2025-01-30",
-    "CHANGED_AT":"11:17:33",
-    "UUID":"DD978388F9811EEFB7DF7998034D2356",
+    "CHANGED_ON":"2025-02-04",
+    "CHANGED_AT":"18:06:37",
+    "UUID":"DD978388F9811EEFB8E458BD57CA8368",
     "ABAP_LANGUAGE_VERSION":"5"
    }
   ]
@@ -34,7 +34,7 @@
     "DDLXNAME":"ZINF_C_USERS",
     "VERSION":"A",
     "UUID":"",
-    "SOURCE":"@Metadata.layer: #PARTNER\r\n\r\n@UI: { headerInfo: { typeName : 'Username',\r\n                     typeNamePlural : 'Adı',\r\n                     title :{ type : #STANDARD, label: 'Web Servis Kullanıcı Bilgileri', value: 'Username' } }\r\n}\r\nannotate view ZINF_C_USERS with\r\n{\r\n  @UI.facet: [{ id : 'Username',\r\n                    purpose : #STANDARD,\r\n                    type: #IDENTIFICATION_REFERENCE,\r\n                    label : 'Web Servis Kullanıcı Bilgileri',\r\n                    position : 10 }]\r\n\r\n\r\n  @UI: { lineItem: [{ position: 10, label: 'Service ID' }], identification: [{ position: 10, label:'Service ID'  }],selectionField: [{ position: 10 }] }\r\n  @Consumption.valueHelpDefinition: [{ entity: { name : 'ZINF_VH_RATES', element: 'Value' } }]\r\n  ServiceId;\r\n  \r\n  @UI: { lineItem: [{ position: 15, label: 'Tanımı' }], identification: [{ position: 15, label:'Tanımı'  }] }\r\n  ServiceTx;\r\n\r\n  @UI: { lineItem: [{ position: 20, label: 'Service URL' }], identification: [{ position: 20, label:'Service URL'  }],selectionField: [{ position: 20 }] }\r\n  ServiceUrl;\r\n\r\n  @UI: { lineItem: [{ position: 30, label: 'Kullanıcı Adı' }], identification: [{ position: 30, label:'Kullanıcı Adı'  }],selectionField: [{ position: 30 }] }\r\n  Username;\r\n\r\n  @UI: { lineItem: [{ position: 40, label: 'Şifre', exclude: true }], identification: [{ position: 40, label:'Şifre'  }] }\r\n  @UI.masked: true\r\n  Password;\r\n\r\n\r\n}"
+    "SOURCE":"@Metadata.layer: #PARTNER\r\n\r\n@UI: { headerInfo: { typeName : 'Username',\r\n                     typeNamePlural : 'Adı',\r\n                     title :{ type : #STANDARD, label: 'Web Servis Kullanıcı Bilgileri', value: 'Username' } }\r\n}\r\nannotate view ZINF_C_USERS with\r\n{\r\n  @UI.facet: [{ id : 'Username',\r\n                    purpose : #STANDARD,\r\n                    type: #IDENTIFICATION_REFERENCE,\r\n                    label : 'Web Servis Kullanıcı Bilgileri',\r\n                    position : 10 }]\r\n\r\n\r\n  @UI: { lineItem: [{ position: 10, label: 'Service ID' }], identification: [{ position: 10, label:'Service ID'  }],selectionField: [{ position: 10 }] }\r\n  @Consumption.valueHelpDefinition: [{ entity: { name : 'ZINF_VH_SERVICE_ID', element: 'Value' } }]\r\n  ServiceId;\r\n  \r\n  @UI: { lineItem: [{ position: 15, label: 'Tanımı' }], identification: [{ position: 15, label:'Tanımı'  }] }\r\n  ServiceTx;\r\n\r\n  @UI: { lineItem: [{ position: 20, label: 'Service URL' }], identification: [{ position: 20, label:'Service URL'  }],selectionField: [{ position: 20 }] }\r\n  ServiceUrl;\r\n\r\n  @UI: { lineItem: [{ position: 30, label: 'Kullanıcı Adı' }], identification: [{ position: 30, label:'Kullanıcı Adı'  }],selectionField: [{ position: 30 }] }\r\n  Username;\r\n\r\n  @UI: { lineItem: [{ position: 40, label: 'Şifre', exclude: true }], identification: [{ position: 40, label:'Şifre'  }] }\r\n  @UI.masked: true\r\n  Password;\r\n\r\n\r\n}"
    }
   ]
  },
@@ -131,7 +131,7 @@
     "ELEMENT":"SERVICEID",
     "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
     "ELEMENT_TYPE":"S",
-    "VALUE":"'ZINF_VH_RATES'"
+    "VALUE":"'ZINF_VH_SERVICE_ID'"
    },
    {
     "DDLXNAME":"ZINF_C_USERS",
@@ -416,8 +416,8 @@
     "EXTENDED_ARTIFACT":"ZINF_C_USERS",
     "VARIANT":"",
     "LAYER":4500,
-    "DT_UUID":"DD978388F9811EEFB7DF7998034D2356",
-    "RT_HASH":"2337A03F98B06094743EA19EF33BDFEB7A099CAB",
+    "DT_UUID":"DD978388F9811EEFB8E458BD57CA8368",
+    "RT_HASH":"AF22AF11580A76E5DF456A18AB0112B6800BD82D",
     "GEN_VERSION":"0",
     "TYPE":"0"
    }
@@ -441,10 +441,10 @@
     "DDLXNAME":"ZINF_C_USERS",
     "ELEMENT":"SERVICEID",
     "NAME":"CONSUMPTION.VALUEHELPDEFINITION$1$.ENTITY.NAME",
-    "PATH":"ZINF_VH_RATES",
+    "PATH":"ZINF_VH_SERVICE_ID",
     "REF_OBJECT_TYPE":"STOB",
     "REF_OBJECT_SUBTYPE":"DO",
-    "REF_OBJECT_NAME":"ZINF_VH_RATES",
+    "REF_OBJECT_NAME":"ZINF_VH_SERVICE_ID",
     "REF_OBJECT_ELEMENT":""
    }
   ]
